@@ -13,6 +13,7 @@ let app = new Vue({
 	el : '#app',
 	data(){
 		return {
+      http: 'http://localhost/atlas/',
 			store_hb : 'Nethouse',
 			store_ty : 'ipekyolubazaar',
 			store_gg : 'Nethouse',
@@ -109,7 +110,7 @@ let app = new Vue({
 
          		let formData = this.toFormData(this.products);
 
-         		axios.post("http://localhost/atlas/api.php?action=add", formData)
+         		axios.post(this.http + "api.php?action=add", formData)
          		.then(function(response){
 
          			setTimeout(function(){
@@ -190,7 +191,7 @@ let app = new Vue({
 
          getList: function(){
 
-         	axios.get("http://localhost/atlas/products.json")
+         	axios.get(this.http + "products.json")
          	.then(function(response){
 
          		app.list = response.data;
@@ -212,7 +213,7 @@ let app = new Vue({
          */
          getTrendyol: function(){
 
-         	axios.get("http://localhost/atlas/marketplace/trendyol.json")
+         	axios.get(this.http + "marketplace/trendyol.json")
          	.then(function(response){
 
          		app.listTrendyol = response.data;
@@ -233,7 +234,7 @@ let app = new Vue({
          			app.show_ty = true;
          			app.hide_ty = false;
 
-         			axios.post("http://localhost/atlas/marketplace_trendyol.php")
+         			axios.post(this.http + "marketplace_trendyol.php")
          			.then(function(response){
 
          				app.getTrendyol();
@@ -258,7 +259,7 @@ let app = new Vue({
          */
          getHepsiburada: function(){
 
-         	axios.get("http://localhost/atlas/marketplace/hepsiburada.json")
+         	axios.get(this.http + "marketplace/hepsiburada.json")
          	.then(function(response){
 
          		app.listHepsiburada = response.data;
@@ -280,7 +281,7 @@ let app = new Vue({
          			app.show_hb = true;
          			app.hide_hb = false;
 
-         			axios.post("http://localhost/atlas/marketplace_hepsiburada.php")
+         			axios.post(this.http + "marketplace_hepsiburada.php")
          			.then(function(response){
          				app.getHepsiburada();
          			});
@@ -304,7 +305,7 @@ let app = new Vue({
          */
          getGittigidiyor: function(){
 
-         	axios.get("http://localhost/atlas/marketplace/gittigidiyor.json")
+         	axios.get(this.http + "marketplace/gittigidiyor.json")
          	.then(function(response){
 
          		app.listGittigidiyor = response.data;
@@ -325,7 +326,7 @@ let app = new Vue({
          			app.show_gg = true;
          			app.hide_gg = false;
 
-         			axios.post("http://localhost/atlas/marketplace_gittigidiyor.php")
+         			axios.post(this.http + "marketplace_gittigidiyor.php")
          			.then(function(response){
          				app.getGittigidiyor();
          			});
@@ -370,7 +371,7 @@ let app = new Vue({
 
          	let formData = this.toFormData(this.login);
 
-         	axios.post("http://localhost/atlas/api.php?action=login", formData)
+         	axios.post(this.http + "api.php?action=login", formData)
          	.then(function(response){
               
               console.log(response);
