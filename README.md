@@ -85,6 +85,11 @@ Not : Sistemin çalışması için herhangi bir veritabanına ihtiyaç yoktur. x
       <td>Hepsiburada kargo fiyatı</td>
     </tr>
        <tr>
+      <td>priceHB</td>
+      <td>int</td>
+      <td>Hepsiburada satış fiyatınız</td>
+    </tr>    
+       <tr>
       <td>urlTY</td>
       <td>string</td>
       <td>Trendyol ürünün listelendiği url adresi</td>
@@ -98,7 +103,12 @@ Not : Sistemin çalışması için herhangi bir veritabanına ihtiyaç yoktur. x
       <td>cargoTY</td>
       <td>float</td>
       <td>Trendyol kargo fiyatı</td>
-    </tr>  
+    </tr> 
+    <tr>
+      <td>priceTY</td>
+      <td>int</td>
+      <td>Trendyol satış fiyatınız</td>
+    </tr>
     <tr>
       <td>urlGG</td>
       <td>string</td>
@@ -113,7 +123,17 @@ Not : Sistemin çalışması için herhangi bir veritabanına ihtiyaç yoktur. x
       <td>cargoGG</td>
       <td>float</td>
       <td>Gittigidiyor kargo fiyatı</td>
-    </tr>    
+    </tr> 
+     <tr>
+      <td>priceGG</td>
+      <td>int</td>
+      <td>Gittigidiyor satış fiyatınız</td>
+    </tr>
+      <tr>
+      <td>status</td>
+      <td>int</td>
+      <td>Okumayı durdur(0)-başlat(1)</td>
+    </tr>   
   </trbody>
   </table>
  
