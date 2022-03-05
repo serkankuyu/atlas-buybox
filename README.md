@@ -25,7 +25,7 @@ Sistem gereksinimleri;
 #### Kurulum
 1. XAMPP (https://www.apachefriends.org/tr/download.html) indirin
 2. Kurulum tamamlandıktan sonra "atlas" dosyasını ana dizine atın
-3. http//localhost/atlas adresini browser'dan açın
+3. http://localhost/atlas adresini browser'dan açın
 
 Not : Sistemin çalışması için herhangi bir veritabanına ihtiyaç yoktur. xampp ve benzeri bir localhostunuzda bile rahatlıkla çalıştırabilirsiniz. 
   Öneri, istek sırasında "Timeout"a düşmeyecek bir localde çalıştırmalısınız.
