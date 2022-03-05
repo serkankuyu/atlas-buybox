@@ -91,14 +91,15 @@
 
   			.ml-35{
   				margin-left: 35px;
-  			}			.small-x{
+  			}			
+			.small-x{
   				font-size: 14px;
-  				font-weight: 600;
+  				font-weight: 500;
   			}
 
   			.small-y{
   				font-size: 12px;
-  				font-weight: 600;	
+  				font-weight: 500;	
   			}
 
   			.small-z{
