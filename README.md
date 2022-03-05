@@ -21,6 +21,8 @@ Not : Sistemin çalışması için herhangi bir veritabanına ihtiyaç yoktur. x
   Öneri, istek sırasında "Timeout"a düşmeyecek bir localde çalıştırmalısınız.
   
  #### products.json
+ Yeni bir ürün eklemek istediğinizde <code>products.json</code> dosyasına ekleme yapmanız gerekmektedir. Eklemeyi isterseniz <code>+</code> işaretine tıkladığında açılan pop-up'tan yapabilir ya da klasörün içerisine aşağıdaki örnekte olduğu gibi element yerleştirebilirsiniz.
+ 
  ```
      {
         "id": 963524,
