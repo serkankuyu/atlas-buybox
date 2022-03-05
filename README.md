@@ -20,6 +20,16 @@ Sistem gereksinimleri;
 Not : Sistemin çalışması için herhangi bir veritabanına ihtiyaç yoktur. xampp ve benzeri bir localhostunuzda bile rahatlıkla çalıştırabilirsiniz. 
   Öneri, istek sırasında "Timeout"a düşmeyecek bir localde çalıştırmalısınız.
   
+ #### URL Tanımlama
+ <code>assets/js/app.js</code> klasöründe bulunan ve aşağıdaki örnekte olan alanda değişiklikler yapmalısınız. Eğer XAMPP gibi localhost'de kullanıyorsanız uzantınızı değiştirmenize gerek yok anca herhangi bir hostingde kullanıyorsanız domain adresinizi yazmalısınız.
+ ```
+	data(){
+		return {
+      http: 'http://localhost/atlas/'
+      }
+
+ ```
+  
  #### products.json
  Yeni bir ürün eklemek istediğinizde <code>products.json</code> dosyasına ekleme yapmanız gerekmektedir. Eklemeyi isterseniz <code>+</code> işaretine tıkladığında açılan pop-up'tan yapabilir ya da klasörün içerisine aşağıdaki örnekte olduğu gibi element yerleştirebilirsiniz.
  
