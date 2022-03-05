@@ -21,7 +21,7 @@ Not : Sistemin çalışması için herhangi bir veritabanına ihtiyaç yoktur. x
   Öneri, istek sırasında "Timeout"a düşmeyecek bir localde çalıştırmalısınız.
   
  #### URL Tanımlama
- <code>assets/js/app.js</code> klasöründe bulunan ve aşağıdaki örnekte olan alanda değişiklikler yapmalısınız. Eğer XAMPP gibi localhost'de kullanıyorsanız uzantınızı değiştirmenize gerek yok anca herhangi bir hostingde kullanıyorsanız domain adresinizi yazmalısınız.
+ <code>assets/js/app.js</code> klasöründe bulunan ve aşağıdaki örnekte olduğu gibi değişiklikler yapmalısınız. Eğer XAMPP gibi localhost'de kullanıyorsanız uzantınızı değiştirmenize gerek yok anca herhangi bir hostingde kullanıyorsanız domain adresinizi yazmalısınız.
  ```
 	data(){
 		return {
