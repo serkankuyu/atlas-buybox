@@ -79,6 +79,41 @@ Not : Sistemin çalışması için herhangi bir veritabanına ihtiyaç yoktur. x
       <td>float</td>
       <td>Hepsiburada komisyon oranı</td>
     </tr>
+     <tr>
+      <td>cargoHB</td>
+      <td>float</td>
+      <td>Hepsiburada kargo fiyatı</td>
+    </tr>
+       <tr>
+      <td>urlTY</td>
+      <td>string</td>
+      <td>Trendyol ürünün listelendiği url adresi</td>
+    </tr>
+    <tr>
+      <td>commissionTY</td>
+      <td>float</td>
+      <td>Trendyol komisyon oranı</td>
+    </tr>
+     <tr>
+      <td>cargoTY</td>
+      <td>float</td>
+      <td>Trendyol kargo fiyatı</td>
+    </tr>  
+    <tr>
+      <td>urlGG</td>
+      <td>string</td>
+      <td>Gittigidiyor ürünün listelendiği url adresi</td>
+    </tr>
+    <tr>
+      <td>commissionGG</td>
+      <td>float</td>
+      <td>Gittigidiyor komisyon oranı</td>
+    </tr>
+     <tr>
+      <td>cargoGG</td>
+      <td>float</td>
+      <td>Gittigidiyor kargo fiyatı</td>
+    </tr>    
   </trbody>
   </table>
  
