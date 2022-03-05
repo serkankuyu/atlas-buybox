@@ -30,7 +30,19 @@ Sistem gereksinimleri;
 Not : Sistemin çalışması için herhangi bir veritabanına ihtiyaç yoktur. xampp ve benzeri bir localhostunuzda bile rahatlıkla çalıştırabilirsiniz. 
   Öneri, istek sırasında "Timeout"a düşmeyecek bir localde çalıştırmalısınız.
   
-  
+ #### Mağazanızın Buybox kontrolü için
+ <code>assets/js/app.js</code> klasöründeki verileri mağaza isiminize göre güncellemelisiniz. İlgili kod parçacığı aşağıdadır.
+ ```
+ data(){
+		return {
+			store_hb : 'Mağaza Adı', // Hepsiburada mağaza adınız 
+			store_ty : 'Mağaza Adı', // Trendyol mağaza adınız
+			store_gg : 'Mağaza Adı', // Gittigidiyor mağaza adınız
+       }
+  }
+      
+ ```
+ 
  #### products.json
  Yeni bir ürün eklemek istediğinizde <code>products.json</code> dosyasına ekleme yapmanız gerekmektedir. Eklemeyi isterseniz <code>+</code> işaretine tıkladığında açılan pop-up'tan yapabilir ya da klasörün içerisine aşağıdaki örnekte olduğu gibi element yerleştirebilirsiniz.
  
