@@ -148,7 +148,7 @@ Not : Sistemin çalışması için herhangi bir veritabanına ihtiyaç yoktur. x
   </table>
   
   # Değişim Günlüğü
-  ####05.03.2022 v1.0.0
+  #### 05.03.2022 v1.0.0
   - Buybox takibi
   - Buybox'a göre fiyat önerisi
   - Buybox'a göre maliyet hesaplaması
