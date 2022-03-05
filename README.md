@@ -9,6 +9,11 @@ Web tabanlı olan programda aşağıdaki özellikler yer almaktadır.
 - Buybox'a göre maliyet hesaplaması
 - Hakediş hesaplama
 
+#### Ürünler Listesi
+![alt text](https://siyahklasor.com/github/screen.png)
+
+#### Analiz Penceresi
+![alt text](https://siyahklasor.com/github/screen2.png)
 
 # Dökümantasyon
 
