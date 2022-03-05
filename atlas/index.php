@@ -57,7 +57,7 @@
 
   			body{
   				font-family: var(--font-name);
-  				font-weight: 600;
+  				font-weight: 500;
   				background: var(--bg-color);
   			}
 
