@@ -136,4 +136,11 @@ Not : Sistemin çalışması için herhangi bir veritabanına ihtiyaç yoktur. x
     </tr>   
   </trbody>
   </table>
+  
+  # Değişim Günlüğü
+  #### v1.0.0
+  - Buybox takibi
+  - Buybox'a göre fiyat önerisi
+  - Buybox'a göre maliyet hesaplaması
+  - Hakediş hesaplaması
  
