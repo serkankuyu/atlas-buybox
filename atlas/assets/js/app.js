@@ -13,9 +13,9 @@ let app = new Vue({
 	el : '#app',
 	data(){
 		return {
-			store_hb : 'Nethouse',
-			store_ty : 'ipekyolubazaar',
-			store_gg : 'Nethouse',
+			store_hb : 'Mağaza Adı',
+			store_ty : 'Mağaza Adı',
+			store_gg : 'Mağaza Adı',
 			messagex         : '',
 			search           : '',
 			showProduct      : 12,
