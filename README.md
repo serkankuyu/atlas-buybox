@@ -1,4 +1,4 @@
-# Başkangıç
+# Başlangıç
 Atlas - Buybox Takibi
 
 Hepsiburada, Trendyol ve Gittigidiyor pazaryerlerinin buybox listesini kontrol etmektedir. 
