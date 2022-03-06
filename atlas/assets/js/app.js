@@ -137,7 +137,7 @@ let app = new Vue({
          						cargoGG      : '',
          						priceGG      : '',
          					};
-                  
+
          					app.getList();
 
          					
@@ -228,18 +228,21 @@ let app = new Vue({
          		this.show_ty = false;
          		this.hide_ty = true;
 
-         		setTimeout(function(){
 
-         			app.show_ty = true;
-         			app.hide_ty = false;
+         		axios.post("marketplace_trendyol.php")
+         		.then(function(response){
 
-         			axios.post("marketplace_trendyol.php")
-         			.then(function(response){
+         			if(response.data.message == 'success'){
+
+         				app.show_ty = true;
+         				app.hide_ty = false;
 
          				app.getTrendyol();
-         			});
 
-         		}, 5000);
+         			}
+
+         		});
+
          	}
 
          },
@@ -275,17 +278,23 @@ let app = new Vue({
          		this.show_hb = false;
          		this.hide_hb = true;
 
-         		setTimeout(function(){
 
-         			app.show_hb = true;
-         			app.hide_hb = false;
 
-         			axios.post("marketplace_hepsiburada.php")
-         			.then(function(response){
+         		axios.post("marketplace_hepsiburada.php")
+         		.then(function(response){
+
+         			if(response.data.message == 'success'){
+
+         				app.show_hb = true;
+         				app.hide_hb = false;
+
          				app.getHepsiburada();
-         			});
 
-         		}, 5000);
+         			}
+
+         		});
+
+         		
          		
          	}
 
@@ -320,17 +329,22 @@ let app = new Vue({
          		this.show_gg = false;
          		this.hide_gg = true;
 
-         		setTimeout(function(){
+         		axios.post("marketplace_gittigidiyor.php")
+         		.then(function(response){
 
-         			app.show_gg = true;
-         			app.hide_gg = false;
 
-         			axios.post("marketplace_gittigidiyor.php")
-         			.then(function(response){
+         			if(response.data.message == 'success'){
+
+         				app.show_gg = true;
+         				app.hide_gg = false;
+
          				app.getGittigidiyor();
-         			});
 
-         		}, 5000);
+         			}
+
+         		});
+
+
 
          	}
 
