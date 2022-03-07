@@ -420,7 +420,7 @@
 										<a data-bs-toggle="collapse" href="#hepsiburada"><i class="bi bi-arrow-down-circle-fill"></i></a>
 									</div>
 								</div>
-								<div class="collapse show" id="hepsiburada">
+								<div class="collapse" id="hepsiburada">
 									<div class="form-floating mb-3">
 										<input type="text" class="form-control" placeholder="Örn;https://hepsiburada.com/philips..." v-model="products.urlHB">
 										<label for="floatingInput" class="p-bold">Hepsiburada URL</label>
