@@ -161,6 +161,11 @@ Not : Sistemin çalışması için herhangi bir veritabanına ihtiyaç yoktur. x
   </table>
   
   # Değişim Günlüğü
+   #### 08.03.2022 v1.0.33
+  - Analiz penceresinde yeni tasarıma geçildi
+  - Tablo başlığı sabitlendi
+  - Hatalı kodlar düzenlendi
+  
   #### 05.03.2022 v1.0.1
   - Buybox takibi
   - Buybox'a göre fiyat önerisi
