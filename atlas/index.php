@@ -93,7 +93,7 @@
   				margin-left: 35px;
   			}			
 			.small-x{
-  				font-size: 14px;
+  				font-size: 12px;
   				font-weight: 500;
   			}
 
@@ -103,7 +103,7 @@
   			}
 
   			.small-z{
-  				font-size: 12px;
+  				font-size: 14px;
   				font-weight: 500;	
   			}
 
@@ -238,7 +238,7 @@
 							<th scope="col">
 								<div class="d-flex align-items-center">
 									<div>
-										Hepsiburada<br><span class="small-y text-muted">{{dateHepsiburada}}</span>
+										Hepsiburada<br><span class="small-x text-muted">{{dateHepsiburada}}</span>
 									</div>
 									<div class="ml-auto">
 										<a href="#" @click="runHepsiburada" v-if="show_hb"><i class="bi bi-play-fill p-19"></i></a>
@@ -250,7 +250,7 @@
 							<th scope="col">
 								<div class="d-flex align-items-center">
 									<div>
-										Trendyol<br><span class="small-y text-muted">{{dateTrendyol}}</span>
+										Trendyol<br><span class="small-x text-muted">{{dateTrendyol}}</span>
 									</div>
 									<div class="ml-auto">
 										<a href="#" @click="runTrendyol" v-if="show_ty"><i class="bi bi-play-fill p-19"></i></a>
@@ -262,7 +262,7 @@
 							<th scope="col">
 								<div class="d-flex align-items-center">
 									<div>
-										Gittigidiyor<br><span class="small-y text-muted">{{dateGittigidiyor}}</span>
+										Gittigidiyor<br><span class="small-x text-muted">{{dateGittigidiyor}}</span>
 									</div>
 									<div class="ml-auto">
 										<a href="#" @click="runGittigidiyor" v-if="show_gg"><i class="bi bi-play-fill p-19"></i></a>
@@ -296,12 +296,12 @@
 								<div class="p-2" v-for="hb in listHepsiburada" v-if="item.id == hb.productsID">
 									<div class="d-flex">
 										<div>
-											<span class="text-muted small-y">{{hb.seller}}</span><br>
+											<span class="text-muted small-x">{{hb.seller}}</span><br>
 											<span class="price-bold">{{parseInt(hb.HBPrice) | money}} TL</span>
-											<br><span class="text-muted small-y">{{hb.productSKU}}</span>
+											<br><span class="text-muted small-x">{{hb.productSKU}}</span>
 										</div>
 										<div class="ml-auto">
-											<span class="text-muted small-y">Fiyat Önerisi</span><br>
+											<span class="text-muted small-x">Fiyat Önerisi</span><br>
 											<span class="price-bold text-muted">
 												{{ parseInt(item.priceHB) / ( ( parseInt(item.priceHB) / parseInt(hb.HBPrice) ) * 1.009 ) | money}} TL
 											</span>
@@ -322,12 +322,12 @@
 								<div class="p-2" v-for="ty in listTrendyol" v-if="item.id == ty.productsID">
 									<div class="d-flex">
 										<div>
-											<span class="text-muted small-y">{{ty.seller}}</span><br>
+											<span class="text-muted small-x">{{ty.seller}}</span><br>
 											<span class="price-bold">{{parseInt(ty.TYPrice) | money}} TL</span>
-											<br><span class="text-muted small-y">{{ty.productSKU}}</span>
+											<br><span class="text-muted small-x">{{ty.productSKU}}</span>
 										</div>
 										<div class="ml-auto">
-											<span class="text-muted small-y">Fiyat Önerisi</span><br>
+											<span class="text-muted small-x">Fiyat Önerisi</span><br>
 											<span class="price-bold text-muted">
 												{{ parseInt(item.priceTY) / ( ( parseInt(item.priceTY) / parseInt(ty.TYPrice) ) * 1.009 ) | money}} TL
 											</span>
@@ -345,12 +345,12 @@
 								<div class="p-2" v-for="gg in listGittigidiyor" v-if="item.id == gg.productsID">
 									<div class="d-flex">
 										<div>
-											<span class="text-muted small-y">{{gg.seller}}</span><br>
+											<span class="text-muted small-x">{{gg.seller}}</span><br>
 											<span class="price-bold">{{parseInt(gg.GGPrice) | money}} TL</span>
-											<br><span class="text-muted small-y">{{gg.productSKU}}</span>
+											<br><span class="text-muted small-x">{{gg.productSKU}}</span>
 										</div>
 										<div class="ml-auto">
-											<span class="text-muted small-y">Fiyat Önerisi</span><br>
+											<span class="text-muted small-x">Fiyat Önerisi</span><br>
 											<span class="price-bold text-muted">
 												{{ parseInt(item.priceGG) / ( ( parseInt(item.priceGG) / parseInt(gg.GGPrice) ) * 1.009 ) | money}} TL
 											</span>
