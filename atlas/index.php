@@ -453,14 +453,14 @@
 									<div class="row g-3">
 										<div class="col-6">
 											<div class="form-floating mb-3">
-												<input type="text" class="form-control" placeholder="Örn;12.98" v-model="products.commissionHB">
+												<input type="number" class="form-control" placeholder="Örn;12.98" v-model="products.commissionHB">
 												<label for="floatingInput" class="p-bold">Hepsiburada Oran</label>
 												<div id="emailHelp" class="form-text">Komisyon oranı, isteğe bağlı</div>
 											</div>
 										</div>
 										<div class="col-6">
 											<div class="form-floating mb-3">
-												<input type="text" class="form-control" placeholder="Örn;12.98" v-model="products.cargoHB">
+												<input type="number" class="form-control" placeholder="Örn;12.98" v-model="products.cargoHB">
 												<label for="floatingInput" class="p-bold">Hepsiburada Kargo</label>
 												<div id="emailHelp" class="form-text">Kargo Bedeli, isteğe bağlı</div>
 											</div>
@@ -494,14 +494,14 @@
 									<div class="row g-3">
 										<div class="col-6">
 											<div class="form-floating mb-3">
-												<input type="text" class="form-control" placeholder="Örn;12.98" v-model="products.commissionTY">
+												<input type="number" class="form-control" placeholder="Örn;12.98" v-model="products.commissionTY">
 												<label for="floatingInput" class="p-bold">Trendyol Oran</label>
 												<div id="emailHelp" class="form-text">Komisyon oranı, isteğe bağlı</div>
 											</div>
 										</div>
 										<div class="col-6">
 											<div class="form-floating mb-3">
-												<input type="text" class="form-control" placeholder="Örn;12.98" v-model="products.cargoTY">
+												<input type="number" class="form-control" placeholder="Örn;12.98" v-model="products.cargoTY">
 												<label for="floatingInput" class="p-bold">Trendyol Kargo</label>
 												<div id="emailHelp" class="form-text">Kargo Bedeli, isteğe bağlı</div>
 											</div>
@@ -534,14 +534,14 @@
 									<div class="row g-3">
 										<div class="col-6">
 											<div class="form-floating mb-3">
-												<input type="text" class="form-control" placeholder="Örn;12.98" v-model="products.commissionGG">
+												<input type="number" class="form-control" placeholder="Örn;12.98" v-model="products.commissionGG">
 												<label for="floatingInput" class="p-bold">Gittigidiyor Oran</label>
 												<div id="emailHelp" class="form-text">Komisyon oranı, isteğe bağlı</div>
 											</div>
 										</div>
 										<div class="col-6">
 											<div class="form-floating mb-3">
-												<input type="text" class="form-control" placeholder="Örn;12.98" v-model="products.cargoGG">
+												<input type="number" class="form-control" placeholder="Örn;12.98" v-model="products.cargoGG">
 												<label for="floatingInput" class="p-bold">Gittigidiyor Kargo</label>
 												<div id="emailHelp" class="form-text">Kargo Bedeli, isteğe bağlı</div>
 											</div>
