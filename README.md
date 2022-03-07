@@ -10,10 +10,10 @@ Web tabanlı olan programda aşağıdaki özellikler yer almaktadır.
 - Hakediş hesaplama
 
 #### Ürünler Listesi
-![alt text](https://siyahklasor.com/github/screen.png)
+![alt text](https://siyahklasor.com/github/screenn.png)
 
 #### Analiz Penceresi
-![alt text](https://siyahklasor.com/github/screen2.png)
+![alt text](https://siyahklasor.com/github/screenn2.png)
 
 # Dökümantasyon
 
