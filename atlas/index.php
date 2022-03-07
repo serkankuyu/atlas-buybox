@@ -224,11 +224,11 @@
 					<thead>
 						<tr>
 							<th></th>
-							<th scope="col">ID<br><span class="small-y text-muted">Stok Kodu</span></th>
+							<th scope="col">ID<br><span class="small-x text-muted">Stok Kodu</span></th>
 							<th scope="col">
 								<div class="d-flex align-items-center">
 									<div>
-										Ürün<br><span class="small-y text-muted">Detay Bilgiler</span>
+										Ürün<br><span class="small-x text-muted">Detay Bilgiler</span>
 									</div>
 									<div class="ml-auto">
 										<a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-plus-circle-fill p-18"></i></a>
