@@ -92,7 +92,7 @@
   			.ml-35{
   				margin-left: 35px;
   			}			
-			.small-x{
+  			.small-x{
   				font-size: 12px;
   				font-weight: 500;
   			}
@@ -198,6 +198,25 @@
   				box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
   			}
 
+  			.table-sticky{
+  				position: -webkit-sticky; /* Safari */
+  				position: sticky;
+  				top: 0;
+  				background: var(--page-color);
+  				z-index: 99;
+  				box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+  			}
+
+  			.apointer{
+  				cursor: pointer;
+  			}
+
+  			.table thead>tr>th {
+  				vertical-align: bottom;
+  				border-bottom: 2px solid hsl(0, 0%, 99%);
+  			}
+
+
 			/*table tbody tr td:hover{
 				box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 			}*/
@@ -218,7 +237,7 @@
 				</div>
 				<table class="table table-bordered align-middle">
 					<thead>
-						<tr>
+						<tr class="table-sticky">
 							<th></th>
 							<th scope="col">ID<br><span class="small-x text-muted">Stok Kodu</span></th>
 							<th scope="col">
@@ -237,7 +256,7 @@
 										Hepsiburada<br><span class="small-x text-muted">{{dateHepsiburada}}</span>
 									</div>
 									<div class="ml-auto">
-										<a href="#" @click="runHepsiburada" v-if="show_hb"><i class="bi bi-play-fill p-19"></i></a>
+										<a class="apointer" @click="runHepsiburada" v-if="show_hb"><i class="bi bi-play-fill p-19"></i></a>
 										<span v-if="hide_hb" v-html="loading"></span>
 									</div>
 								</div>
@@ -249,7 +268,7 @@
 										Trendyol<br><span class="small-x text-muted">{{dateTrendyol}}</span>
 									</div>
 									<div class="ml-auto">
-										<a href="#" @click="runTrendyol" v-if="show_ty"><i class="bi bi-play-fill p-19"></i></a>
+										<a class="apointer" @click="runTrendyol" v-if="show_ty"><i class="bi bi-play-fill p-19"></i></a>
 										<span v-if="hide_ty" v-html="loading"></span>
 									</div>
 								</div>
@@ -261,7 +280,7 @@
 										Gittigidiyor<br><span class="small-x text-muted">{{dateGittigidiyor}}</span>
 									</div>
 									<div class="ml-auto">
-										<a href="#" @click="runGittigidiyor" v-if="show_gg"><i class="bi bi-play-fill p-19"></i></a>
+										<a class="apointer" @click="runGittigidiyor" v-if="show_gg"><i class="bi bi-play-fill p-19"></i></a>
 										<span v-if="hide_gg" v-html="loading"></span>
 									</div>
 								</div>
@@ -677,7 +696,7 @@
 											</div>
 										</div>
 
-									
+
 										<div class="alert alert-warning small-y mt-3" role="alert">
 											<i class="bi bi-info-circle"></i> Buybox için Maliyet<br>
 											<strong>{{ ( parseInt(gg.GGPrice) - ((parseInt(gg.GGPrice) / 100 ) * select.commissionGG) - (select.cargoGG)) / 1.12 | money }} TL</strong>
