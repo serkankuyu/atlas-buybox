@@ -306,8 +306,8 @@
 												{{ parseInt(item.priceHB) / ( ( parseInt(item.priceHB) / parseInt(hb.HBPrice) ) * 1.009 ) | money}} TL
 											</span>
 											<br>
-											<span class="small-y text-danger" v-if="store_hb != hb.seller"><i class="bi bi-x-circle-fill"></i> Buybox</span>	
-											<span class="small-y text-success p-bold" v-if="store_hb == hb.seller"><i class="bi bi-check-circle-fill"></i> Buybox</span>								 		
+											<span class="small-x text-danger" v-if="store_hb != hb.seller"><i class="bi bi-x-circle-fill"></i> Buybox</span>	
+											<span class="small-x text-success p-bold" v-if="store_hb == hb.seller"><i class="bi bi-check-circle-fill"></i> Buybox</span>								 		
 										</div>
 									</div>
 
@@ -332,8 +332,8 @@
 												{{ parseInt(item.priceTY) / ( ( parseInt(item.priceTY) / parseInt(ty.TYPrice) ) * 1.009 ) | money}} TL
 											</span>
 											<br>
-											<span class="small-y text-danger" v-if="store_ty != ty.seller"><i class="bi bi-x-circle-fill"></i> Buybox</span>	
-											<span class="small-y text-success p-bold" v-if="store_ty == ty.seller"><i class="bi bi-check-circle-fill"></i> Buybox</span>							 		
+											<span class="small-x text-danger" v-if="store_ty != ty.seller"><i class="bi bi-x-circle-fill"></i> Buybox</span>	
+											<span class="small-x text-success p-bold" v-if="store_ty == ty.seller"><i class="bi bi-check-circle-fill"></i> Buybox</span>							 		
 										</div>
 									</div>
 								</div>
@@ -355,8 +355,8 @@
 												{{ parseInt(item.priceGG) / ( ( parseInt(item.priceGG) / parseInt(gg.GGPrice) ) * 1.009 ) | money}} TL
 											</span>
 											<br>
-											<span class="small-y text-danger" v-if="store_gg != gg.seller"><i class="bi bi-x-circle-fill"></i> Buybox</span>	
-											<span class="small-y text-success p-bold" v-if="store_gg == gg.seller"><i class="bi bi-check-circle-fill"></i> Buybox</span>								 		
+											<span class="small-x text-danger" v-if="store_gg != gg.seller"><i class="bi bi-x-circle-fill"></i> Buybox</span>	
+											<span class="small-x text-success p-bold" v-if="store_gg == gg.seller"><i class="bi bi-check-circle-fill"></i> Buybox</span>								 		
 										</div>
 									</div>
 
