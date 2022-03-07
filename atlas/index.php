@@ -211,12 +211,8 @@
 				<div class="page-body mb-2">
 					<div class="d-flex mt-3 align-items-center">
 						<div class="p-2 text-center"><img src="https://siyahklasor.com/assets/img/logo_dark.svg" width="41"></div>
-						<div class="ml-auto text-end">
-							<span class="small-y">TOPLAM ÜRÜN</span><br>
-							<h5>{{list.length}}</h5>
-						</div>
-						<div class="ml-25">
-							<input type="search" class="form-control" placeholder="Envanterde ara" v-model="search">
+						<div class="ml-auto">
+							<input type="search" class="form-control" :placeholder="list.length +' / envanter içerisinde ara..'" v-model="search">
 						</div>
 					</div>
 				</div>
