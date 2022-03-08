@@ -577,7 +577,7 @@
 							<div class="row">
 								<div class="col-10">
 									<div class="row">
-										<div class="col-4 bg-light br-right-ff">
+										<div class="col-4 bg-light br-right-ff" style="border-radius: 5px 0px 0px 5px;">
 											<div class="p-3" v-for="hb in listHepsiburada" v-if="select.id == hb.productsID">
 												<div class="d-flex align-items-center">
 													<div>
