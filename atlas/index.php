@@ -228,6 +228,78 @@
   				box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
   			}
 
+  			/* TOOLTİP */
+
+  			[data-tooltip] {
+  				position: relative;
+  				z-index: 10;
+  			}
+
+  			/* Positioning and visibility settings of the tooltip */
+  			[data-tooltip]:before,
+  			[data-tooltip]:after {
+  				position: absolute;
+  				visibility: hidden;
+  				opacity: 0;
+  				left: 50%;
+  				bottom: calc(100% + 5px);
+  				pointer-events: none;
+  				transition: 0.2s;
+  				will-change: transform;
+  			}
+
+  			/* The actual tooltip with a dynamic width */
+  			[data-tooltip]:before {
+  				content: attr(data-tooltip);
+  				padding: 10px 18px;
+  				min-width: 50px;
+  				max-width: 300px;
+  				width: max-content;
+  				width: -moz-max-content;
+  				border-radius: 6px;
+  				font-size: 13px;
+  				/*   font-size: 0.73rem; */
+  				background-color: rgba(59, 72, 80, 0.9);
+  				background-image: linear-gradient(30deg,
+  					rgba(59, 72, 80, 0.44),
+  					rgba(59, 68, 75, 0.44),
+  					rgba(60, 82, 88, 0.44));
+  				box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.2);
+  				color: #fff;
+  				text-align: center;
+  				white-space: pre-wrap;
+  				transform: translate(-50%, -5px) scale(0.5);
+  			}
+
+
+  			[data-tooltip]:after {
+  				content: '';
+  				border-style: solid;
+  				border-width: 5px 5px 0px 5px;
+  				border-color: rgba(55, 64, 70, 0.9) transparent transparent transparent;
+  				transition-duration: 0s;       
+  				transform-origin: top;
+  				transform: translateX(-50%) scaleY(0);
+  			}
+
+
+  			[data-tooltip]:hover:before,
+  			[data-tooltip]:hover:after {
+  				visibility: visible;
+  				opacity: 1;
+  			}
+  			/* Scales from 0.5 to 1 -> grow effect */
+  			[data-tooltip]:hover:before {
+  				transition-delay: 0.3s;
+  				transform: translate(-50%, -5px) scale(1);
+  			}
+  			/* Slide down effect only on mouseenter (NOT on mouseleave) */
+  			[data-tooltip]:hover:after {
+  				transition-delay: 0.5s; /* Starting after the grow effect */
+  				transition-duration: 0.2s;
+  				transform: translateX(-50%) scaleY(1);
+  			}
+
 			/*table tbody tr td:hover{
 				box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 				}*/
@@ -599,7 +671,7 @@
 														<div class="col-6">
 															<div class="card">
 																<div class="card-body">
-																	<span class="small-x">HB Buybox</span>
+																	<span class="small-x">{{hb.seller}}</span>
 																	<p class="p-bold">{{parseInt(hb.HBPrice) | money}}</p>
 																</div>
 															</div>
@@ -610,7 +682,7 @@
 														<div class="col-6">
 															<div class="card">
 																<div class="card-body">
-																	<span class="small-x">{{store_hb}} <a data-bs-toggle="collapse" href="#accountHB" class="text-secondary small-x"><i class="bi bi-plus"></i></a></span>
+																	<span class="small-x">{{store_hb}} <a data-bs-toggle="collapse" href="#accountHB" class="text-secondary small-x" data-tooltip="Yeni Fiyat" data-tooltip-location="top"><i class="bi bi-plus"></i></a></span>
 																	<div class="collapse" id="accountHB">
 																		<input type="number" class="form-control form-control-sm" v-model="select.priceHB">
 																	</div>
@@ -639,7 +711,7 @@
 															<span class="badge rounded-pill bg-warning" v-if="parseInt(hb.HBPrice) == select.priceHB"><i class="bi bi-info"></i> Eşit % {{ (parseInt(hb.HBPrice) / select.priceHB).toFixed(2) }}</span>
 
 															<p class="mt-2 text-secondary small-x">
-																<i class="bi bi-info-circle"></i> Maliyet : {{ ( parseInt(hb.HBPrice) - ((parseInt(hb.HBPrice) / 100 ) * select.commissionHB) - (select.cargoHB)) / 1.12 | money }} TL
+																<span data-tooltip="Hepsiburada buybox'ına göre hesaplandı. Bu maliyetin aşağısında olanların buybox'ı alma olasılığı artar ve daha kârlı olabilirler." data-tooltip-location="top"><i class="bi bi-info-circle"></i></span> Maliyet : {{ ( parseInt(hb.HBPrice) - ((parseInt(hb.HBPrice) / 100 ) * select.commissionHB) - (select.cargoHB)) / 1.12 | money }} TL
 															</p>
 														</div>
 
@@ -666,7 +738,7 @@
 														<div class="col-6">
 															<div class="card">
 																<div class="card-body">
-																	<span class="small-x">TY Buybox</span>
+																	<span class="small-x">{{ty.seller}}</span>
 																	<p class="p-bold">{{parseInt(ty.TYPrice) | money}}</p>
 																</div>
 															</div>
@@ -677,7 +749,7 @@
 														<div class="col-6">
 															<div class="card">
 																<div class="card-body">
-																	<span class="small-x">{{store_ty}} <a data-bs-toggle="collapse" href="#accountTY" class="text-secondary small-x"><i class="bi bi-plus"></i></a></span>
+																	<span class="small-x">{{store_ty}} <a data-bs-toggle="collapse" href="#accountTY" class="text-secondary small-x" data-tooltip="Yeni Fiyat" data-tooltip-location="top"><i class="bi bi-plus"></i></a></span>
 																	<div class="collapse" id="accountTY">
 																		<input type="number" class="form-control form-control-sm" v-model="select.priceTY">
 																	</div>
@@ -706,7 +778,7 @@
 															<span class="badge rounded-pill bg-warning" v-if="parseInt(ty.TYPrice) == select.priceTY"><i class="bi bi-info"></i> Eşit % {{ (parseInt(ty.TYPrice) / select.priceTY).toFixed(2) }}</span>
 
 															<p class="mt-2 text-secondary small-x">
-																<i class="bi bi-info-circle"></i> Maliyet : {{ ( parseInt(ty.TYPrice) - ((parseInt(ty.TYPrice) / 100 ) * select.commissionTY) - (select.cargoTY)) / 1.12 | money }} TL
+																<span data-tooltip="Trendyol buybox'ına göre hesaplandı. Bu maliyetin aşağısında olanların buybox'ı alma olasılığı artar ve daha kârlı olabilirler." data-tooltip-location="top"><i class="bi bi-info-circle"></i></span> Maliyet : {{ ( parseInt(ty.TYPrice) - ((parseInt(ty.TYPrice) / 100 ) * select.commissionTY) - (select.cargoTY)) / 1.12 | money }} TL
 															</p>
 														</div>
 
@@ -733,7 +805,7 @@
 														<div class="col-6">
 															<div class="card">
 																<div class="card-body">
-																	<span class="small-x">GG Buybox</span>
+																	<span class="small-x">{{gg.seller}}</span>
 																	<p class="p-bold">{{parseInt(gg.GGPrice) | money}}</p>
 																</div>
 															</div>
@@ -744,7 +816,7 @@
 														<div class="col-6">
 															<div class="card">
 																<div class="card-body">
-																	<span class="small-x">{{store_gg}} <a data-bs-toggle="collapse" href="#accountGG" class="text-secondary small-x"><i class="bi bi-plus"></i></a></span>
+																	<span class="small-x">{{store_gg}} <a data-bs-toggle="collapse" href="#accountGG" class="text-secondary small-x" data-tooltip="Yeni Fiyat" data-tooltip-location="top"><i class="bi bi-plus"></i></a></span>
 																	<div class="collapse" id="accountGG">
 																		<input type="number" class="form-control form-control-sm" v-model="select.priceGG">
 																	</div>
@@ -773,7 +845,7 @@
 															<span class="badge rounded-pill bg-warning" v-if="parseInt(gg.GGPrice) == select.priceGG"><i class="bi bi-info"></i> Eşit % {{ (parseInt(gg.GGPrice) / select.priceGG).toFixed(2) }}</span>
 
 															<p class="mt-2 text-secondary small-x">
-																<i class="bi bi-info-circle"></i> Maliyet : {{ ( parseInt(gg.GGPrice) - ((parseInt(gg.GGPrice) / 100 ) * select.commissionGG) - (select.cargoGG)) / 1.12 | money }} TL
+																<span data-tooltip="Gittigidiyor buybox'ına göre hesaplandı. Bu maliyetin aşağısında olanların buybox'ı alma olasılığı artar ve daha kârlı olabilirler." data-tooltip-location="top"><i class="bi bi-info-circle"></i></span> Maliyet : {{ ( parseInt(gg.GGPrice) - ((parseInt(gg.GGPrice) / 100 ) * select.commissionGG) - (select.cargoGG)) / 1.12 | money }} TL
 															</p>
 														</div>
 
