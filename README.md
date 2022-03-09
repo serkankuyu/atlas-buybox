@@ -16,7 +16,7 @@ https://siyahklasor.com/atlas/
 ![alt text](https://siyahklasor.com/github/screenn.png)
 
 #### Analiz Penceresi
-![alt text](https://siyahklasor.com/github/screenn2.png)
+![alt text](https://siyahklasor.com/github/screen3.png)
 
 # Dökümantasyon
 
