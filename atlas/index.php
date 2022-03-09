@@ -8,7 +8,7 @@
    * @description | Exceptions sınıfını dahil ediyoruz
    * @serkankuyu [serkan.kuyu@hotmail.com.tr]
    * @siyahklasor.com/magaza [Pazaryeri Mağaza Simülasyonu]
-   * 
+   * @version v1.1.37
    *
    *
    */
@@ -195,7 +195,7 @@
   			}
 
   			.br-right-ff{
-  				border-right: 7px solid #fff;
+  				border-right: 5px solid #fff;
   			}
 
   			.modal-shadow{
@@ -703,8 +703,15 @@
 													
 
 													<div class="d-flex align-items-center mb-4">
-														<div></div>
-														<div class="ml-auto text-end">
+														<div class="br-right">
+															<div class="mr-15">
+																<span class="text-muted small-x"><span class="text-muted small-x"><span data-tooltip="Algoritma tarafından önerilen fiyat" data-tooltip-location="top"><i class="bi bi-info-circle"></i></span> Fiyat Önerisi</span><br>
+																<span class="price-bold small-y text-muted">
+																	{{ parseInt(select.priceHB) / ( ( parseInt(select.priceHB) / parseInt(hb.HBPrice) ) * 1.009 ) | money}} TL
+																</span>
+															</div>
+														</div>
+														<div class="ml-auto text-end mt-2">
 															<span class="badge rounded-pill bg-danger" v-if="parseInt(hb.HBPrice) < select.priceHB"><i class="bi bi-x"></i> Değil % {{ ( select.priceHB / parseInt(hb.HBPrice)).toFixed(2) }} </span>
 
 															<span class="badge rounded-pill bg-success" v-if="parseInt(hb.HBPrice) > select.priceHB"><i class="bi bi-check"></i> Uygun % {{ (parseInt(hb.HBPrice) / select.priceHB).toFixed(2) }}</span>
@@ -712,7 +719,7 @@
 															<span class="badge rounded-pill bg-warning" v-if="parseInt(hb.HBPrice) == select.priceHB"><i class="bi bi-info"></i> Eşit % {{ (parseInt(hb.HBPrice) / select.priceHB).toFixed(2) }}</span>
 
 															<p class="mt-2 text-secondary small-x">
-																<span data-tooltip="Hepsiburada buybox'ına göre hesaplandı. Bu maliyetin aşağısında olanların buybox'ı alma olasılığı artar ve daha kârlı olabilirler." data-tooltip-location="top"><i class="bi bi-info-circle"></i></span> Maliyet : {{ ( parseInt(hb.HBPrice) - ((parseInt(hb.HBPrice) / 100 ) * select.commissionHB) - (select.cargoHB)) / 1.12 | money }} TL
+																<span data-tooltip="Algoritma tarafından önerilen maliyet" data-tooltip-location="top"><i class="bi bi-info-circle"></i></span> Maliyet : {{ ( parseInt(hb.HBPrice) - ((parseInt(hb.HBPrice) / 100 ) * select.commissionHB) - (select.cargoHB)) / 1.12 | money }} TL
 															</p>
 														</div>
 
@@ -770,8 +777,15 @@
 													
 
 													<div class="d-flex align-items-center mb-4">
-														<div></div>
-														<div class="ml-auto text-end">
+														<div class="br-right">
+															<div class="mr-15">
+																<span class="text-muted small-x"><span class="text-muted small-x"><span data-tooltip="Algoritma tarafından önerilen fiyat" data-tooltip-location="top"><i class="bi bi-info-circle"></i></span> Fiyat Önerisi</span><br>
+																<span class="price-bold small-y text-muted">
+																	{{ parseInt(select.priceTY) / ( ( parseInt(select.priceTY) / parseInt(ty.TYPrice) ) * 1.009 ) | money}} TL
+																</span>
+															</div>
+														</div>
+														<div class="ml-auto text-end mt-2">
 															<span class="badge rounded-pill bg-danger" v-if="parseInt(ty.TYPrice) < select.priceTY"><i class="bi bi-x"></i> Değil % {{ ( select.priceTY / parseInt(ty.TYPrice)).toFixed(2) }} </span>
 
 															<span class="badge rounded-pill bg-success" v-if="parseInt(ty.TYPrice) > select.priceTY"><i class="bi bi-check"></i> Uygun % {{ (parseInt(ty.TYPrice) / select.priceTY).toFixed(2) }}</span>
@@ -779,7 +793,7 @@
 															<span class="badge rounded-pill bg-warning" v-if="parseInt(ty.TYPrice) == select.priceTY"><i class="bi bi-info"></i> Eşit % {{ (parseInt(ty.TYPrice) / select.priceTY).toFixed(2) }}</span>
 
 															<p class="mt-2 text-secondary small-x">
-																<span data-tooltip="Trendyol buybox'ına göre hesaplandı. Bu maliyetin aşağısında olanların buybox'ı alma olasılığı artar ve daha kârlı olabilirler." data-tooltip-location="top"><i class="bi bi-info-circle"></i></span> Maliyet : {{ ( parseInt(ty.TYPrice) - ((parseInt(ty.TYPrice) / 100 ) * select.commissionTY) - (select.cargoTY)) / 1.12 | money }} TL
+																<span data-tooltip="Algoritma tarafından önerilen maliyet" data-tooltip-location="top"><i class="bi bi-info-circle"></i></span> Maliyet : {{ ( parseInt(ty.TYPrice) - ((parseInt(ty.TYPrice) / 100 ) * select.commissionTY) - (select.cargoTY)) / 1.12 | money }} TL
 															</p>
 														</div>
 
@@ -837,8 +851,15 @@
 													
 
 													<div class="d-flex align-items-center mb-4">
-														<div></div>
-														<div class="ml-auto text-end">
+														<div class="br-right">
+															<div class="mr-15">
+																<span class="text-muted small-x"><span data-tooltip="Algoritma tarafından önerilen fiyat" data-tooltip-location="top"><i class="bi bi-info-circle"></i></span> Fiyat Önerisi</span><br>
+																<span class="price-bold small-y text-muted">
+																	{{ parseInt(select.priceGG) / ( ( parseInt(select.priceGG) / parseInt(gg.GGPrice) ) * 1.009 ) | money}} TL
+																</span>
+															</div>
+														</div>
+														<div class="ml-auto text-end mt-2">
 															<span class="badge rounded-pill bg-danger" v-if="parseInt(gg.GGPrice) < select.priceGG"><i class="bi bi-x"></i> Değil % {{ ( select.priceGG / parseInt(gg.GGPrice)).toFixed(2) }} </span>
 
 															<span class="badge rounded-pill bg-success" v-if="parseInt(gg.GGPrice) > select.priceGG"><i class="bi bi-check"></i> Uygun % {{ (parseInt(gg.GGPrice) / select.priceGG).toFixed(2) }}</span>
@@ -846,7 +867,7 @@
 															<span class="badge rounded-pill bg-warning" v-if="parseInt(gg.GGPrice) == select.priceGG"><i class="bi bi-info"></i> Eşit % {{ (parseInt(gg.GGPrice) / select.priceGG).toFixed(2) }}</span>
 
 															<p class="mt-2 text-secondary small-x">
-																<span data-tooltip="Gittigidiyor buybox'ına göre hesaplandı. Bu maliyetin aşağısında olanların buybox'ı alma olasılığı artar ve daha kârlı olabilirler." data-tooltip-location="top"><i class="bi bi-info-circle"></i></span> Maliyet : {{ ( parseInt(gg.GGPrice) - ((parseInt(gg.GGPrice) / 100 ) * select.commissionGG) - (select.cargoGG)) / 1.12 | money }} TL
+																<span data-tooltip="Algoritma tarafından önerilen maliyet" data-tooltip-location="top"><i class="bi bi-info-circle"></i></span> Maliyet : {{ ( parseInt(gg.GGPrice) - ((parseInt(gg.GGPrice) / 100 ) * select.commissionGG) - (select.cargoGG)) / 1.12 | money }} TL
 															</p>
 														</div>
 
