@@ -471,7 +471,7 @@
 				</div>
 
 				<div class="text-center mt-5">
-					<button class="btn btn-dark rounded shadow-sm w-25" title="Daha Fazlası" v-if="filterList.length > 21 && showProduct < filterList.length" @click="loadmore"><span class="ml-5 mr-5"><span v-if="show">Daha Fazlası</span><span v-if="hide" v-html="loading"></span></span></button>
+					<button class="btn btn-dark rounded shadow-sm w-25" title="Daha Fazlası" v-if="showProduct < filterList.length" @click="loadmore"><span class="ml-5 mr-5"><span v-if="show">Daha Fazlası</span><span v-if="hide" v-html="loading"></span></span></button>
 				</div>
 
 				<div class="d-flex align-items-center mt-5 mb-5">
