@@ -45,184 +45,188 @@
   		<!-- Style -->
   		<style type="text/css">
 
-  		[v-cloak] {
-  			display: none
-  		}
-
-  		:root{
-  			--font-name :'Inter', sans-serif;
-  			--bg-color:#F5F5F5;
-  			--page-color:#FFF;
-  		}
-
-  		body{
-  			font-family: var(--font-name);
-  			font-weight: 500;
-  			background: var(--bg-color);
-  		}
-
-  		h1,h2,h3,h4,h5,h6{
-  			font-weight: 900;
-  		}
-
-  		.page{
-  			background: var(--page-color);
-  			height: 100%;
-
-  		}
-
-  		.page .page-body{
-  			padding: 25px;
-  		}
-
-  		.ml-auto{
-  			margin-left: auto;
-  		}
-  		.ml-15{
-  			margin-left: 15px;
-  		}
-
-  		.mr-15{
-  			margin-right: 15px;
-  		}
-  		.ml-25{
-  			margin-left: 25px;
-  		}
-
-  		.ml-35{
-  			margin-left: 35px;
-  		}			
-  		.small-x{
-  			font-size: 12px;
-  			font-weight: 500;
-  		}
-
-  		.small-y{
-  			font-size: 14px;
-  			font-weight: 500;	
-  		}
-
-  		.small-z{
-  			font-size: 14px;
-  			font-weight: 500;	
-  		}
-
-  		.td-size-459{
-  			width: 459px;
-  		}
-
-  		.p-13{
-  			font-size: 13px;
-  		}
-
-  		.p-14{
-  			font-size: 14px;
-  		}
-
-  		.p-15{
-  			font-size: 15px;
-  		}
-
-  		.p-16{
-  			font-size: 16px;
-  		}
-  		.p-19{
-  			font-size: 19px;
-  		}
-  		.p-18{
-  			font-size: 18px;
-  		}
-  		.p-29{
-  			font-size: 29px;
-  		}
-  		.p-bold{
-  			font-weight: 800;
-  		}
-
-  		.price-bold{
-  			font-weight: 800;
-  		}
-
-  		a{
-  			text-decoration: none;
-  			color: #000;
-  		}
-
-  		a:hover{
-  			color: #000;
-  		}
-  		.underline{
-  			position: relative;
-  		}
-
-  		.underline::before{
-  			content: '';
-  			position: absolute;
-  			bottom: 0;
-  			right: 0;
-  			width: 0;
-  			height: 2px;
-  			background-color: #000;
-  			transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
-  		}
-
-  		@media (hover: hover) and (pointer: fine) {
-  			.underline:hover::before{
-  				left: 0;
-  				right: auto;
-  				width: 100%;
+  			[v-cloak] {
+  				display: none
   			}
-  		}
 
-  		.icon-card{
-  			background:var(--bg-color);
-  			color: #B2BABB;
-  			border-radius: 17px;
-  			width: 59px;
-  			box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
-  		}
+  			:root{
+  				--font-name :'Inter', sans-serif;
+  				--bg-color:#F5F5F5;
+  				--page-color:#FFF;
+  			}
 
-  		.br-top{
-  			border-top: 7px solid #fff;
-  		}
+  			body{
+  				font-family: var(--font-name);
+  				font-weight: 500;
+  				background: var(--bg-color);
+  			}
 
-  		.br-right{
-  			border-right: 1px solid #ddd;
-  		}
+  			h1,h2,h3,h4,h5,h6{
+  				font-weight: 900;
+  			}
 
-  		.br-right-ff{
-  			border-right: 7px solid #fff;
-  		}
+  			.page{
+  				background: var(--page-color);
+  				height: 100%;
 
-  		.modal-shadow{
-  			box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-  		}
+  			}
 
-  		.card-shadow{
-  			box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
-  		}
+  			.page .page-body{
+  				padding: 25px;
+  			}
 
-  		.table-sticky{
-  			position: -webkit-sticky; /* Safari */
-  			position: sticky;
-  			top: 0;
-  			background: var(--page-color);
-  			z-index: 99;
-  			box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
-  		}
+  			.ml-auto{
+  				margin-left: auto;
+  			}
+  			.ml-15{
+  				margin-left: 15px;
+  			}
 
-  		.apointer{
-  			cursor: pointer;
-  		}
+  			.mr-15{
+  				margin-right: 15px;
+  			}
+  			.ml-25{
+  				margin-left: 25px;
+  			}
 
-  		.table thead>tr>th {
-  			vertical-align: bottom;
-  			border-bottom: 2px solid hsl(0, 0%, 99%);
-  		}
+  			.ml-35{
+  				margin-left: 35px;
+  			}			
+  			.small-x{
+  				font-size: 12px;
+  				font-weight: 500;
+  			}
 
-  		.col-shadow{
-  			box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
-  		}
+  			.small-w{
+  				font-size: 12.5px;
+  				font-weight: 500;
+  			}
+  			.small-y{
+  				font-size: 14px;
+  				font-weight: 500;	
+  			}
+
+  			.small-z{
+  				font-size: 14px;
+  				font-weight: 500;	
+  			}
+
+  			.td-size-459{
+  				width: 459px;
+  			}
+
+  			.p-13{
+  				font-size: 13px;
+  			}
+
+  			.p-14{
+  				font-size: 14px;
+  			}
+
+  			.p-15{
+  				font-size: 15px;
+  			}
+
+  			.p-16{
+  				font-size: 16px;
+  			}
+  			.p-19{
+  				font-size: 19px;
+  			}
+  			.p-18{
+  				font-size: 18px;
+  			}
+  			.p-29{
+  				font-size: 29px;
+  			}
+  			.p-bold{
+  				font-weight: 800;
+  			}
+
+  			.price-bold{
+  				font-weight: 800;
+  			}
+
+  			a{
+  				text-decoration: none;
+  				color: #000;
+  			}
+
+  			a:hover{
+  				color: #000;
+  			}
+  			.underline{
+  				position: relative;
+  			}
+
+  			.underline::before{
+  				content: '';
+  				position: absolute;
+  				bottom: 0;
+  				right: 0;
+  				width: 0;
+  				height: 2px;
+  				background-color: #000;
+  				transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+  			}
+
+  			@media (hover: hover) and (pointer: fine) {
+  				.underline:hover::before{
+  					left: 0;
+  					right: auto;
+  					width: 100%;
+  				}
+  			}
+
+  			.icon-card{
+  				background:var(--bg-color);
+  				color: #B2BABB;
+  				border-radius: 17px;
+  				width: 59px;
+  				box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  			}
+
+  			.br-top{
+  				border-top: 7px solid #fff;
+  			}
+
+  			.br-right{
+  				border-right: 1px solid #ddd;
+  			}
+
+  			.br-right-ff{
+  				border-right: 7px solid #fff;
+  			}
+
+  			.modal-shadow{
+  				box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  			}
+
+  			.card-shadow{
+  				box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  			}
+
+  			.table-sticky{
+  				position: -webkit-sticky; /* Safari */
+  				position: sticky;
+  				top: 0;
+  				background: var(--page-color);
+  				z-index: 99;
+  				box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+  			}
+
+  			.apointer{
+  				cursor: pointer;
+  			}
+
+  			.table thead>tr>th {
+  				vertical-align: bottom;
+  				border-bottom: 2px solid hsl(0, 0%, 99%);
+  			}
+
+  			.col-shadow{
+  				box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+  			}
 
 			/*table tbody tr td:hover{
 				box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
@@ -572,16 +576,17 @@
 
 				<!-- Modal -->
 				<div class="modal fade" id="analytcs" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-					<div class="modal-dialog  modal-dialog-centered"  style="max-width:1099px;">
+					<div class="modal-dialog  modal-dialog-centered"  style="max-width:1199px;">
 						<div class="modal-content modal-shadow">
 							<div class="row">
 								<div class="col-10">
 									<div class="row">
 										<div class="col-4 bg-light br-right-ff" style="border-radius: 5px 0px 0px 5px;">
-											<div class="p-3" v-for="hb in listHepsiburada" v-if="select.id == hb.productsID">
+											<div class="p-2" v-for="hb in listHepsiburada" v-if="select.id == hb.productsID">
 												<div class="d-flex align-items-center">
 													<div>
-														<h6 class="mt-3">Hepsiburada</h6>
+														<p class="mt-3 p-bold">Hepsiburada<br><span class="small-x text-muted">{{dateHepsiburada}}</span></p>
+														
 													</div>
 													<div class="ml-auto">
 														<a :href="hb.productUrl" class="text-muted" target="_blank"><i class="bi bi-arrow-up-right-circle p-16"></i></a>
@@ -589,47 +594,66 @@
 												</div>
 
 												<div>
-													<div class="card mt-5">
-														<div class="card-body p-bold">
-															<div class="d-flex align-items-center">
-																<div class="br-right">
-																	<div class="mr-15">	
-																		<span class="small-y">{{store_hb}} <a data-bs-toggle="collapse" href="#accountHB" class="text-secondary"><i class="bi bi-plus-circle"></i></a></span><br>
-																		{{select.priceHB | money}}
-																	</div>
-																</div>
-																<div class="ml-15">
-																	<span class="small-y">HB Buybox</span><br>
-																	{{parseInt(hb.HBPrice) | money}}
+
+													<div class="row mt-4">
+														<div class="col-6">
+															<div class="card">
+																<div class="card-body">
+																	<span class="small-x">HB Buybox</span>
+																	<p class="p-bold">{{parseInt(hb.HBPrice) | money}}</p>
 																</div>
 															</div>
 
+															<div class="mt-3 mb-1 small-w text-secondary"><i class="bi bi-receipt-cutoff"></i> Komisyon: {{ (parseInt(hb.HBPrice) / 100 ) * select.commissionHB | money}}</div>
+															<div class="mb-1 small-w text-secondary"><i class="bi bi-briefcase"></i> Hakediş: {{ parseInt(hb.HBPrice) - ( (parseInt(hb.HBPrice) / 100 ) * select.commissionHB ) - select.cargoHB| money}}</div>
+														</div>
+														<div class="col-6">
+															<div class="card">
+																<div class="card-body">
+																	<span class="small-x">{{store_hb}} <a data-bs-toggle="collapse" href="#accountHB" class="text-secondary small-x"><i class="bi bi-plus"></i></a></span>
+																	<div class="collapse" id="accountHB">
+																		<input type="number" class="form-control form-control-sm" v-model="select.priceHB">
+																	</div>
+																	<p class="p-bold">{{select.priceHB | money}}</p>
+																</div>
+															</div>
+
+															
+
+															<div class="mb-1 mt-3 small-w text-secondary"><i class="bi bi-percent"></i> Komisyon : {{select.commissionHB}}</div>
+															<div class="mb-1 small-w text-secondary"><i class="bi bi-box"></i> Kargo: {{select.cargoHB | money}}</div>
+															<div class="mb-1 small-w text-secondary"><i class="bi bi-receipt-cutoff"></i> Komisyon: {{ (select.priceHB / 100 ) * select.commissionHB | money}}</div>
+															<div class="mb-1 small-w text-secondary"><i class="bi bi-briefcase"></i> Hakediş: {{ select.priceHB - ( (select.priceHB / 100 ) * select.commissionHB ) - select.cargoHB| money}}</div>
+															<div class="mb-5 small-w text-secondary"><i class="bi bi-cash-stack"></i> Kazanç: {{ (select.priceHB - ( (select.priceHB / 100 ) * select.commissionHB ) - select.cargoHB) - select.cost  | money}}</div>
 														</div>
 													</div>
-													<p class="p-14 mt-3 text-secondary">
-														<i class="bi bi-info-circle"></i> Buybox için Maliyet : {{ ( parseInt(hb.HBPrice) - ((parseInt(hb.HBPrice) / 100 ) * select.commissionHB) - (select.cargoHB)) / 1.12 | money }} TL
-													</p>
+													
 
-													<div class="collapse mt-3" id="accountHB">
-														<span class="small-y">Buybox fiyat hesapla</span>
-														<input type="number" class="form-control form-control-sm" v-model="select.priceHB">
+													<div class="d-flex align-items-center mb-4">
+														<div></div>
+														<div class="ml-auto text-end">
+															<span class="badge rounded-pill bg-danger" v-if="parseInt(hb.HBPrice) < select.priceHB"><i class="bi bi-x"></i> Değil % {{ ( select.priceHB / parseInt(hb.HBPrice)).toFixed(2) }} </span>
+
+															<span class="badge rounded-pill bg-success" v-if="parseInt(hb.HBPrice) > select.priceHB"><i class="bi bi-check"></i> Uygun % {{ (parseInt(hb.HBPrice) / select.priceHB).toFixed(2) }}</span>
+
+															<span class="badge rounded-pill bg-warning" v-if="parseInt(hb.HBPrice) == select.priceHB"><i class="bi bi-info"></i> Eşit % {{ (parseInt(hb.HBPrice) / select.priceHB).toFixed(2) }}</span>
+
+															<p class="mt-2 text-secondary small-x">
+																<i class="bi bi-info-circle"></i> Maliyet : {{ ( parseInt(hb.HBPrice) - ((parseInt(hb.HBPrice) / 100 ) * select.commissionHB) - (select.cargoHB)) / 1.12 | money }} TL
+															</p>
+														</div>
+
 													</div>
-
-													<div class="mb-1 mt-5 small-y text-secondary"><i class="bi bi-percent"></i> Komisyon : {{select.commissionHB}}</div>
-													<div class="mb-1 small-y text-secondary"><i class="bi bi-box"></i> Kargo: {{select.cargoHB | money}} TL</div>
-													<div class="mb-1 small-y text-secondary"><i class="bi bi-receipt-cutoff"></i> Komisyon: {{ (select.priceHB / 100 ) * select.commissionHB | money}} TL</div>
-													<div class="mb-1 small-y text-secondary"><i class="bi bi-briefcase"></i> Hakediş: {{ select.priceHB - ( (select.priceHB / 100 ) * select.commissionHB ) - select.cargoHB| money}} TL</div>
-													<div class="mb-5 small-y text-secondary"><i class="bi bi-cash-stack"></i> Kazanç: {{ (select.priceHB - ( (select.priceHB / 100 ) * select.commissionHB ) - select.cargoHB) - select.cost  | money}} TL</div>
 
 
 												</div>
 											</div>
 										</div>
 										<div class="col-4 bg-light br-right-ff">
-											<div class="p-3" v-for="ty in listTrendyol" v-if="select.id == ty.productsID">
+											<div class="p-2" v-for="ty in listTrendyol" v-if="select.id == ty.productsID">
 												<div class="d-flex align-items-center">
 													<div>
-														<h6 class="mt-3">Trendyol</h6>
+														<p class="mt-3 p-bold">Trendyol<br><span class="small-x text-muted">{{dateTrendyol}}</span></p>
 													</div>
 													<div class="ml-auto">
 														<a :href="ty.productUrl" class="text-muted" target="_blank"><i class="bi bi-arrow-up-right-circle p-16"></i></a>
@@ -637,47 +661,66 @@
 												</div>
 
 												<div>
-													<div class="card mt-5">
-														<div class="card-body p-bold">
-															<div class="d-flex align-items-center">
-																<div class="br-right">
-																	<div class="mr-15">	
-																		<span class="small-y">{{store_ty}} <a data-bs-toggle="collapse" href="#accountTY" class="text-secondary"><i class="bi bi-plus-circle"></i></a></span><br>
-																		{{select.priceTY | money}}
-																	</div>
-																</div>
-																<div class="ml-15">
-																	<span class="small-y">TY Buybox</span><br>
-																	{{parseInt(ty.TYPrice) | money}}
+
+													<div class="row mt-4">
+														<div class="col-6">
+															<div class="card">
+																<div class="card-body">
+																	<span class="small-x">TY Buybox</span>
+																	<p class="p-bold">{{parseInt(ty.TYPrice) | money}}</p>
 																</div>
 															</div>
 
+															<div class="mt-3 mb-1 small-w text-secondary"><i class="bi bi-receipt-cutoff"></i> Komisyon: {{ (parseInt(ty.TYPrice) / 100 ) * select.commissionTY | money}}</div>
+															<div class="mb-1 small-w text-secondary"><i class="bi bi-briefcase"></i> Hakediş: {{ parseInt(ty.TYPrice) - ( (parseInt(ty.TYPrice) / 100 ) * select.commissionTY ) - select.cargoTY| money}}</div>
+														</div>
+														<div class="col-6">
+															<div class="card">
+																<div class="card-body">
+																	<span class="small-x">{{store_ty}} <a data-bs-toggle="collapse" href="#accountTY" class="text-secondary small-x"><i class="bi bi-plus"></i></a></span>
+																	<div class="collapse" id="accountTY">
+																		<input type="number" class="form-control form-control-sm" v-model="select.priceTY">
+																	</div>
+																	<p class="p-bold">{{select.priceTY | money}}</p>
+																</div>
+															</div>
+
+															
+
+															<div class="mb-1 mt-3 small-w text-secondary"><i class="bi bi-percent"></i> Komisyon : {{select.commissionTY}}</div>
+															<div class="mb-1 small-w text-secondary"><i class="bi bi-box"></i> Kargo: {{select.cargoTY | money}}</div>
+															<div class="mb-1 small-w text-secondary"><i class="bi bi-receipt-cutoff"></i> Komisyon: {{ (select.priceTY / 100 ) * select.commissionTY | money}}</div>
+															<div class="mb-1 small-w text-secondary"><i class="bi bi-briefcase"></i> Hakediş: {{ select.priceTY - ( (select.priceTY / 100 ) * select.commissionTY ) - select.cargoTY | money}}</div>
+															<div class="mb-5 small-w text-secondary"><i class="bi bi-cash-stack"></i> Kazanç: {{ (select.priceTY - ( (select.priceTY / 100 ) * select.commissionTY ) - select.cargoTY) - select.cost  | money}}</div>
 														</div>
 													</div>
-													<p class="p-14 mt-3 text-secondary">
-														<i class="bi bi-info-circle"></i> Buybox için Maliyet : {{ ( parseInt(ty.TYPrice) - ((parseInt(ty.TYPrice) / 100 ) * select.commissionTY) - (select.cargoTY)) / 1.12 | money }} TL
-													</p>
+													
 
-													<div class="collapse mt-3" id="accountTY">
-														<span class="small-y">Buybox fiyat hesapla</span>
-														<input type="number" class="form-control form-control-sm" v-model="select.priceTY">
+													<div class="d-flex align-items-center mb-4">
+														<div></div>
+														<div class="ml-auto text-end">
+															<span class="badge rounded-pill bg-danger" v-if="parseInt(ty.TYPrice) < select.priceTY"><i class="bi bi-x"></i> Değil % {{ ( select.priceTY / parseInt(ty.TYPrice)).toFixed(2) }} </span>
+
+															<span class="badge rounded-pill bg-success" v-if="parseInt(ty.TYPrice) > select.priceTY"><i class="bi bi-check"></i> Uygun % {{ (parseInt(ty.TYPrice) / select.priceTY).toFixed(2) }}</span>
+
+															<span class="badge rounded-pill bg-warning" v-if="parseInt(ty.TYPrice) == select.priceTY"><i class="bi bi-info"></i> Eşit % {{ (parseInt(ty.TYPrice) / select.priceTY).toFixed(2) }}</span>
+
+															<p class="mt-2 text-secondary small-x">
+																<i class="bi bi-info-circle"></i> Maliyet : {{ ( parseInt(ty.TYPrice) - ((parseInt(ty.TYPrice) / 100 ) * select.commissionTY) - (select.cargoTY)) / 1.12 | money }} TL
+															</p>
+														</div>
+
 													</div>
-
-													<div class="mb-1 mt-5 small-y text-secondary"><i class="bi bi-percent"></i> Komisyon : {{select.commissionTY}}</div>
-													<div class="mb-1 small-y text-secondary"><i class="bi bi-box"></i> Kargo: {{select.cargoTY | money}} TL</div>
-													<div class="mb-1 small-y text-secondary"><i class="bi bi-receipt-cutoff"></i> Komisyon: {{ (select.priceTY / 100 ) * select.commissionTY | money}} TL</div>
-													<div class="mb-1 small-y text-secondary"><i class="bi bi-briefcase"></i> Hakediş: {{ select.priceTY - ( (select.priceTY / 100 ) * select.commissionTY ) - select.cargoTY| money}} TL</div>
-													<div class="mb-5 small-y text-secondary"><i class="bi bi-cash-stack"></i> Kazanç: {{ (select.priceTY - ( (select.priceTY / 100 ) * select.commissionTY ) - select.cargoTY) - select.cost  | money}} TL</div>
 
 
 												</div>
 											</div>
 										</div>
 										<div class="col-4 bg-light">
-											<div class="p-3" v-for="gg in listGittigidiyor" v-if="select.id == gg.productsID">
+											<div class="p-2" v-for="gg in listGittigidiyor" v-if="select.id == gg.productsID">
 												<div class="d-flex align-items-center">
 													<div>
-														<h6 class="mt-3">Gittigidiyor</h6>
+														<p class="mt-3 p-bold">Gittigidiyor<br><span class="small-x text-muted">{{dateGittigidiyor}}</span></p>
 													</div>
 													<div class="ml-auto">
 														<a :href="gg.productUrl" class="text-muted" target="_blank"><i class="bi bi-arrow-up-right-circle p-16"></i></a>
@@ -685,37 +728,56 @@
 												</div>
 
 												<div>
-													<div class="card mt-5">
-														<div class="card-body p-bold">
-															<div class="d-flex align-items-center">
-																<div class="br-right">
-																	<div class="mr-15">	
-																		<span class="small-y">{{store_gg}} <a data-bs-toggle="collapse" href="#accountGG" class="text-secondary"><i class="bi bi-plus-circle"></i></a></span><br>
-																		{{select.priceGG | money}}
-																	</div>
-																</div>
-																<div class="ml-15">
-																	<span class="small-y">GG Buybox</span><br>
-																	{{parseInt(gg.GGPrice) | money}}
+
+													<div class="row mt-4">
+														<div class="col-6">
+															<div class="card">
+																<div class="card-body">
+																	<span class="small-x">GG Buybox</span>
+																	<p class="p-bold">{{parseInt(gg.GGPrice) | money}}</p>
 																</div>
 															</div>
 
+															<div class="mt-3 mb-1 small-w text-secondary"><i class="bi bi-receipt-cutoff"></i> Komisyon: {{ (parseInt(gg.GGPrice) / 100 ) * select.commissionGG | money}}</div>
+															<div class="mb-1 small-w text-secondary"><i class="bi bi-briefcase"></i> Hakediş: {{ parseInt(gg.GGPrice) - ( (parseInt(gg.GGPrice) / 100 ) * select.commissionGG ) - select.cargoGG| money}}</div>
+														</div>
+														<div class="col-6">
+															<div class="card">
+																<div class="card-body">
+																	<span class="small-x">{{store_gg}} <a data-bs-toggle="collapse" href="#accountGG" class="text-secondary small-x"><i class="bi bi-plus"></i></a></span>
+																	<div class="collapse" id="accountGG">
+																		<input type="number" class="form-control form-control-sm" v-model="select.priceGG">
+																	</div>
+																	<p class="p-bold">{{select.priceGG | money}}</p>
+																</div>
+															</div>
+
+															
+
+															<div class="mb-1 mt-3 small-w text-secondary"><i class="bi bi-percent"></i> Komisyon : {{select.commissionGG}}</div>
+															<div class="mb-1 small-w text-secondary"><i class="bi bi-box"></i> Kargo: {{select.cargoGG | money}}</div>
+															<div class="mb-1 small-w text-secondary"><i class="bi bi-receipt-cutoff"></i> Komisyon: {{ (select.priceGG / 100 ) * select.commissionGG | money}}</div>
+															<div class="mb-1 small-w text-secondary"><i class="bi bi-briefcase"></i> Hakediş: {{ select.priceGG - ( (select.priceGG / 100 ) * select.commissionGG ) - select.cargoGG| money}}</div>
+															<div class="mb-5 small-w text-secondary"><i class="bi bi-cash-stack"></i> Kazanç: {{ (select.priceGG - ( (select.priceGG / 100 ) * select.commissionGG ) - select.cargoGG) - select.cost  | money}}</div>
 														</div>
 													</div>
-													<p class="p-14 mt-3 text-secondary">
-														<i class="bi bi-info-circle"></i> Buybox için Maliyet : {{ ( parseInt(gg.GGPrice) - ((parseInt(gg.GGPrice) / 100 ) * select.commissionGG) - (select.cargoGG)) / 1.12 | money }} TL
-													</p>
+													
 
-													<div class="collapse mt-3" id="accountGG">
-														<span class="small-y">Buybox fiyat hesapla</span>
-														<input type="number" class="form-control form-control-sm" v-model="select.priceGG">
+													<div class="d-flex align-items-center mb-4">
+														<div></div>
+														<div class="ml-auto text-end">
+															<span class="badge rounded-pill bg-danger" v-if="parseInt(gg.GGPrice) < select.priceGG"><i class="bi bi-x"></i> Değil % {{ ( select.priceGG / parseInt(gg.GGPrice)).toFixed(2) }} </span>
+
+															<span class="badge rounded-pill bg-success" v-if="parseInt(gg.GGPrice) > select.priceGG"><i class="bi bi-check"></i> Uygun % {{ (parseInt(gg.GGPrice) / select.priceGG).toFixed(2) }}</span>
+
+															<span class="badge rounded-pill bg-warning" v-if="parseInt(gg.GGPrice) == select.priceGG"><i class="bi bi-info"></i> Eşit % {{ (parseInt(gg.GGPrice) / select.priceGG).toFixed(2) }}</span>
+
+															<p class="mt-2 text-secondary small-x">
+																<i class="bi bi-info-circle"></i> Maliyet : {{ ( parseInt(gg.GGPrice) - ((parseInt(gg.GGPrice) / 100 ) * select.commissionGG) - (select.cargoGG)) / 1.12 | money }} TL
+															</p>
+														</div>
+
 													</div>
-
-													<div class="mb-1 mt-5 small-y text-secondary"><i class="bi bi-percent"></i> Komisyon : {{select.commissionGG}}</div>
-													<div class="mb-1 small-y text-secondary"><i class="bi bi-box"></i> Kargo: {{select.cargoGG | money}} TL</div>
-													<div class="mb-1 small-y text-secondary"><i class="bi bi-receipt-cutoff"></i> Komisyon: {{ (select.priceGG / 100 ) * select.commissionGG | money}} TL</div>
-													<div class="mb-1 small-y text-secondary"><i class="bi bi-briefcase"></i> Hakediş: {{ select.priceGG - ( (select.priceGG / 100 ) * select.commissionGG ) - select.cargoGG | money}} TL</div>
-													<div class="mb-5 small-y text-secondary"><i class="bi bi-cash-stack"></i> Kazanç: {{ (select.priceGG - ( (select.priceGG / 100 ) * select.commissionGG ) - select.cargoGG) - select.cost  | money}} TL</div>
 
 
 												</div>
