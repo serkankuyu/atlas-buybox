@@ -198,7 +198,7 @@ if(!empty($base)){
 				"productUrl"      => $base,
 				"productImg"      => trim($_product_img),
 				"productsID"      => $field['id'],
-				"HBPrice"         => $_TL[0],
+				"HBPrice"         => trim($_TL[0]),
 				"dataDate"        => date('d.m.Y H:i:s')
 			);
 
