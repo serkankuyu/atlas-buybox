@@ -329,7 +329,7 @@
 											Ürün<br><span class="small-x text-muted">Detay Bilgiler</span>
 										</div>
 										<div class="ml-auto">
-											<a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-plus-circle-fill p-18"></i></a>
+											<a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" data-tooltip="Yeni Ürün Ekle" data-tooltip-location="bottom"><i class="bi bi-plus-circle-fill p-18"></i></a>
 										</div>
 									</div>
 								</th>
@@ -339,7 +339,8 @@
 											Hepsiburada<br><span class="small-x text-muted">{{dateHepsiburada}}</span>
 										</div>
 										<div class="ml-auto">
-											<a class="apointer" @click="runHepsiburada" v-if="show_hb"><i class="bi bi-play-fill p-19"></i></a>
+
+											<a class="apointer" @click="runHepsiburada" v-if="show_hb" data-tooltip="Başlat" data-tooltip-location="bottom"><i class="bi bi-play-fill p-19"></i></a>
 											<span v-if="hide_hb" v-html="loading"></span>
 										</div>
 									</div>
@@ -351,7 +352,7 @@
 											Trendyol<br><span class="small-x text-muted">{{dateTrendyol}}</span>
 										</div>
 										<div class="ml-auto">
-											<a class="apointer" @click="runTrendyol" v-if="show_ty"><i class="bi bi-play-fill p-19"></i></a>
+											<a class="apointer" @click="runTrendyol" v-if="show_ty" data-tooltip="Başlat" data-tooltip-location="bottom"><i class="bi bi-play-fill p-19"></i></a>
 											<span v-if="hide_ty" v-html="loading"></span>
 										</div>
 									</div>
@@ -363,7 +364,7 @@
 											Gittigidiyor<br><span class="small-x text-muted">{{dateGittigidiyor}}</span>
 										</div>
 										<div class="ml-auto">
-											<a class="apointer" @click="runGittigidiyor" v-if="show_gg"><i class="bi bi-play-fill p-19"></i></a>
+											<a class="apointer" @click="runGittigidiyor" v-if="show_gg" data-tooltip="Başlat" data-tooltip-location="bottom"><i class="bi bi-play-fill p-19"></i></a>
 											<span v-if="hide_gg" v-html="loading"></span>
 										</div>
 									</div>
