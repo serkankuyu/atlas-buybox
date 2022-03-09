@@ -15,6 +15,9 @@ https://siyahklasor.com/atlas/
 #### Ürünler Listesi
 ![alt text](https://siyahklasor.com/github/screenn.png)
 
+#### Yeni ürün ekleme Penceresi
+![alt text](https://siyahklasor.com/github/screen6.png)
+
 #### Analiz Penceresi
 ![alt text](https://siyahklasor.com/github/screen4.png)
 
