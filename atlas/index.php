@@ -8,7 +8,7 @@
    * @description | Exceptions sınıfını dahil ediyoruz
    * @serkankuyu [serkan.kuyu@hotmail.com.tr]
    * @siyahklasor.com/magaza [Pazaryeri Mağaza Simülasyonu]
-   * @version v1.1.43
+   * @version v1.1.45
    *
    *
    */
@@ -994,17 +994,11 @@
 											<div class="mt-2 small-x text-secondary" id="stockCode">{{select.id}}</div>
 											{{select.name}}
 										</p>
-										<div class="mt-4">
+										<div class="mt-5">
 											<label class="small-x form-label">MALİYET</label>
 											<input type="number" class="form-control form-control-sm" v-model="select.cost" disabled>
 											<div class="form-text small-x">Ürünün ham maliyet fiyatı</div>
 										</div>
-										<div class="mt-1">
-											<label class="small-x form-label">KARLILIK ORANI</label>
-											<input type="number" class="form-control form-control-sm" placeholder="Örn;12" disabled>
-											<div class="form-text small-x">Hedeflediğiniz karlılık oranı</div>
-										</div>
-
 									</div>
 
 								</div>
