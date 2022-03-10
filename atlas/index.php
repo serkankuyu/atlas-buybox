@@ -8,7 +8,7 @@
    * @description | Exceptions sınıfını dahil ediyoruz
    * @serkankuyu [serkan.kuyu@hotmail.com.tr]
    * @siyahklasor.com/magaza [Pazaryeri Mağaza Simülasyonu]
-   * @version v1.1.37
+   * @version v1.1.39
    *
    *
    */
@@ -40,6 +40,16 @@
   		<!-- JS -->
   		<script src="assets/js/vue.js?v2.6.12"></script>
   		<script src="assets/js/axios.js?v0.21.0"></script>
+
+  		<!-- Global site tag (gtag.js) - Google Analytics -->
+  		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-165924333-1"></script>
+  		<script>
+  			window.dataLayer = window.dataLayer || [];
+  			function gtag(){dataLayer.push(arguments);}
+  			gtag('js', new Date());
+
+  			gtag('config', 'UA-165924333-1');
+  		</script>
 
 
   		<!-- Style -->
@@ -677,7 +687,7 @@
 																</div>
 															</div>
 
-															<div class="mt-3 mb-1 small-w text-secondary"><i class="bi bi-receipt-cutoff"></i> Komisyon: {{ (parseInt(hb.HBPrice) / 100 ) * select.commissionHB | money}}</div>
+															<div class="mt-4 mb-1 small-w text-secondary"><i class="bi bi-receipt-cutoff"></i> Komisyon: {{ hbcomm = (parseInt(hb.HBPrice) / 100 ) * select.commissionHB | money}}</div>
 															<div class="mb-1 small-w text-secondary"><i class="bi bi-briefcase"></i> Hakediş: {{ parseInt(hb.HBPrice) - ( (parseInt(hb.HBPrice) / 100 ) * select.commissionHB ) - select.cargoHB| money}}</div>
 														</div>
 														<div class="col-6">
@@ -692,8 +702,8 @@
 															</div>
 
 															
-
-															<div class="mb-1 mt-3 small-w text-secondary"><i class="bi bi-percent"></i> Komisyon : {{select.commissionHB}}</div>
+															<div class="mb-1 mt-4 small-w text-danger p-bold"><span data-tooltip="Algoritma tarafından önerilen kritik fiyat" data-tooltip-location="top"><i class="bi bi-info-circle"></i></span>  Kritik : {{ (select.cost + hbcomm + select.cargoHB ) * 1.10 | money}}</div>
+															<div class="mb-1 small-w text-secondary"><i class="bi bi-percent"></i> Komisyon : {{select.commissionHB}}</div>
 															<div class="mb-1 small-w text-secondary"><i class="bi bi-box"></i> Kargo: {{select.cargoHB | money}}</div>
 															<div class="mb-1 small-w text-secondary"><i class="bi bi-receipt-cutoff"></i> Komisyon: {{ (select.priceHB / 100 ) * select.commissionHB | money}}</div>
 															<div class="mb-1 small-w text-secondary"><i class="bi bi-briefcase"></i> Hakediş: {{ select.priceHB - ( (select.priceHB / 100 ) * select.commissionHB ) - select.cargoHB| money}}</div>
@@ -712,9 +722,9 @@
 															</div>
 														</div>
 														<div class="ml-auto text-end mt-2">
-															<span class="badge rounded-pill bg-danger" v-if="parseInt(hb.HBPrice) < select.priceHB"><i class="bi bi-x"></i> Değil % {{ ( select.priceHB / parseInt(hb.HBPrice)).toFixed(2) }} </span>
+															<span class="badge rounded-pill bg-danger" v-if="parseInt(hb.HBPrice) < select.priceHB"><i class="bi bi-x"></i> Değil <i class="bi bi-arrow-down"></i> % {{ (((select.priceHB / parseInt(hb.HBPrice))*100) - 100) .toFixed(2) }} </span>
 
-															<span class="badge rounded-pill bg-success" v-if="parseInt(hb.HBPrice) > select.priceHB"><i class="bi bi-check"></i> Uygun % {{ (parseInt(hb.HBPrice) / select.priceHB).toFixed(2) }}</span>
+															<span class="badge rounded-pill bg-success" v-if="parseInt(hb.HBPrice) > select.priceHB"><i class="bi bi-check"></i> Uygun <i class="bi bi-arrow-up"></i> % {{ (((parseInt(hb.HBPrice) / select.priceHB) * 100) - 100).toFixed(2) }}</span>
 
 															<span class="badge rounded-pill bg-warning" v-if="parseInt(hb.HBPrice) == select.priceHB"><i class="bi bi-info"></i> Eşit % {{ (parseInt(hb.HBPrice) / select.priceHB).toFixed(2) }}</span>
 
@@ -751,7 +761,7 @@
 																</div>
 															</div>
 
-															<div class="mt-3 mb-1 small-w text-secondary"><i class="bi bi-receipt-cutoff"></i> Komisyon: {{ (parseInt(ty.TYPrice) / 100 ) * select.commissionTY | money}}</div>
+															<div class="mt-4 mb-1 small-w text-secondary"><i class="bi bi-receipt-cutoff"></i> Komisyon: {{ yycomm = (parseInt(ty.TYPrice) / 100 ) * select.commissionTY | money}}</div>
 															<div class="mb-1 small-w text-secondary"><i class="bi bi-briefcase"></i> Hakediş: {{ parseInt(ty.TYPrice) - ( (parseInt(ty.TYPrice) / 100 ) * select.commissionTY ) - select.cargoTY| money}}</div>
 														</div>
 														<div class="col-6">
@@ -767,7 +777,8 @@
 
 															
 
-															<div class="mb-1 mt-3 small-w text-secondary"><i class="bi bi-percent"></i> Komisyon : {{select.commissionTY}}</div>
+															<div class="mb-1 mt-4 small-w text-danger p-bold"><span data-tooltip="Algoritma tarafından önerilen kritik fiyat" data-tooltip-location="top"><i class="bi bi-info-circle"></i></span>  Kritik : {{ (select.cost + yycomm + select.cargoTY ) * 1.10 | money}}</div>
+															<div class="mb-1 small-w text-secondary"><i class="bi bi-percent"></i> Komisyon : {{select.commissionTY}}</div>
 															<div class="mb-1 small-w text-secondary"><i class="bi bi-box"></i> Kargo: {{select.cargoTY | money}}</div>
 															<div class="mb-1 small-w text-secondary"><i class="bi bi-receipt-cutoff"></i> Komisyon: {{ (select.priceTY / 100 ) * select.commissionTY | money}}</div>
 															<div class="mb-1 small-w text-secondary"><i class="bi bi-briefcase"></i> Hakediş: {{ select.priceTY - ( (select.priceTY / 100 ) * select.commissionTY ) - select.cargoTY | money}}</div>
@@ -786,9 +797,9 @@
 															</div>
 														</div>
 														<div class="ml-auto text-end mt-2">
-															<span class="badge rounded-pill bg-danger" v-if="parseInt(ty.TYPrice) < select.priceTY"><i class="bi bi-x"></i> Değil % {{ ( select.priceTY / parseInt(ty.TYPrice)).toFixed(2) }} </span>
+															<span class="badge rounded-pill bg-danger" v-if="parseInt(ty.TYPrice) < select.priceTY"><i class="bi bi-x"></i> Değil <i class="bi bi-arrow-down"></i> % {{ (((select.priceTY / parseInt(ty.TYPrice))*100) - 100) .toFixed(2) }} </span>
 
-															<span class="badge rounded-pill bg-success" v-if="parseInt(ty.TYPrice) > select.priceTY"><i class="bi bi-check"></i> Uygun % {{ (parseInt(ty.TYPrice) / select.priceTY).toFixed(2) }}</span>
+															<span class="badge rounded-pill bg-success" v-if="parseInt(ty.TYPrice) > select.priceTY"><i class="bi bi-check"></i> Uygun <i class="bi bi-arrow-up"></i> % {{ (((parseInt(ty.TYPrice) / select.priceTY) * 100) - 100).toFixed(2) }}</span>
 
 															<span class="badge rounded-pill bg-warning" v-if="parseInt(ty.TYPrice) == select.priceTY"><i class="bi bi-info"></i> Eşit % {{ (parseInt(ty.TYPrice) / select.priceTY).toFixed(2) }}</span>
 
@@ -812,6 +823,9 @@
 													<div class="ml-auto">
 														<a :href="gg.productUrl" class="text-muted" target="_blank"><i class="bi bi-arrow-up-right-circle p-16"></i></a>
 													</div>
+													<!--<div class="ml-15">
+														<a :href="gg.productUrl" class="text-muted" target="_blank" data-tooltip="Verileri Kaydet" data-tooltip-location="top"><i class="bi bi-files p-16"></i></a>
+													</div>-->
 												</div>
 
 												<div>
@@ -825,7 +839,7 @@
 																</div>
 															</div>
 
-															<div class="mt-3 mb-1 small-w text-secondary"><i class="bi bi-receipt-cutoff"></i> Komisyon: {{ (parseInt(gg.GGPrice) / 100 ) * select.commissionGG | money}}</div>
+															<div class="mt-4 mb-1 small-w text-secondary"><i class="bi bi-receipt-cutoff"></i> Komisyon: {{ ggcomm = (parseInt(gg.GGPrice) / 100 ) * select.commissionGG | money}}</div>
 															<div class="mb-1 small-w text-secondary"><i class="bi bi-briefcase"></i> Hakediş: {{ parseInt(gg.GGPrice) - ( (parseInt(gg.GGPrice) / 100 ) * select.commissionGG ) - select.cargoGG| money}}</div>
 														</div>
 														<div class="col-6">
@@ -840,8 +854,8 @@
 															</div>
 
 															
-
-															<div class="mb-1 mt-3 small-w text-secondary"><i class="bi bi-percent"></i> Komisyon : {{select.commissionGG}}</div>
+															<div class="mb-1 mt-4 small-w text-danger p-bold"><span data-tooltip="Algoritma tarafından önerilen kritik fiyat" data-tooltip-location="top"><i class="bi bi-info-circle"></i></span>  Kritik : {{ (select.cost + ggcomm + select.cargoGG ) * 1.10 | money}}</div>
+															<div class="mb-1 small-w text-secondary"><i class="bi bi-percent"></i> Komisyon : {{select.commissionGG}}</div>
 															<div class="mb-1 small-w text-secondary"><i class="bi bi-box"></i> Kargo: {{select.cargoGG | money}}</div>
 															<div class="mb-1 small-w text-secondary"><i class="bi bi-receipt-cutoff"></i> Komisyon: {{ (select.priceGG / 100 ) * select.commissionGG | money}}</div>
 															<div class="mb-1 small-w text-secondary"><i class="bi bi-briefcase"></i> Hakediş: {{ select.priceGG - ( (select.priceGG / 100 ) * select.commissionGG ) - select.cargoGG| money}}</div>
@@ -860,9 +874,9 @@
 															</div>
 														</div>
 														<div class="ml-auto text-end mt-2">
-															<span class="badge rounded-pill bg-danger" v-if="parseInt(gg.GGPrice) < select.priceGG"><i class="bi bi-x"></i> Değil % {{ ( select.priceGG / parseInt(gg.GGPrice)).toFixed(2) }} </span>
+															<span class="badge rounded-pill bg-danger" v-if="parseInt(gg.GGPrice) < select.priceGG"><i class="bi bi-x"></i> Değil <i class="bi bi-arrow-down"></i> % {{ (((select.priceGG / parseInt(gg.GGPrice))*100) - 100) .toFixed(2) }} </span>
 
-															<span class="badge rounded-pill bg-success" v-if="parseInt(gg.GGPrice) > select.priceGG"><i class="bi bi-check"></i> Uygun % {{ (parseInt(gg.GGPrice) / select.priceGG).toFixed(2) }}</span>
+															<span class="badge rounded-pill bg-success" v-if="parseInt(gg.GGPrice) > select.priceGG"><i class="bi bi-check"></i> Uygun <i class="bi bi-arrow-up"></i> % {{ (((parseInt(gg.GGPrice) / select.priceGG) * 100) - 100).toFixed(2) }}</span>
 
 															<span class="badge rounded-pill bg-warning" v-if="parseInt(gg.GGPrice) == select.priceGG"><i class="bi bi-info"></i> Eşit % {{ (parseInt(gg.GGPrice) / select.priceGG).toFixed(2) }}</span>
 
