@@ -309,6 +309,87 @@
   				transition-duration: 0.2s;
   				transform: translateX(-50%) scaleY(1);
   			}
+			
+						/*
+			  If you want some adjustability
+			  here are some orientation settings you can use:
+			  */
+
+  			/* LEFT */
+  			/* Tooltip + arrow */
+  			[data-tooltip-location="left"]:before,
+  			[data-tooltip-location="left"]:after {
+  				left: auto;
+  				right: calc(100% + 5px);
+  				bottom: 50%;
+  			}
+
+  			/* Tooltip */
+  			[data-tooltip-location="left"]:before {
+  				transform: translate(-5px, 50%) scale(0.5);
+  			}
+  			[data-tooltip-location="left"]:hover:before {
+  				transform: translate(-5px, 50%) scale(1);
+  			}
+
+  			/* Arrow */
+  			[data-tooltip-location="left"]:after {
+  				border-width: 5px 0px 5px 5px;
+  				border-color: transparent transparent transparent rgba(55, 64, 70, 0.9);
+  				transform-origin: left;
+  				transform: translateY(50%) scaleX(0);
+  			}
+  			[data-tooltip-location="left"]:hover:after {
+  				transform: translateY(50%) scaleX(1);
+  			}
+
+
+
+  			/* RIGHT */
+  			[data-tooltip-location="right"]:before,
+  			[data-tooltip-location="right"]:after {
+  				left: calc(100% + 5px);
+  				bottom: 50%;
+  			}
+
+  			[data-tooltip-location="right"]:before {
+  				transform: translate(5px, 50%) scale(0.5);
+  			}
+  			[data-tooltip-location="right"]:hover:before {
+  				transform: translate(5px, 50%) scale(1);
+  			}
+
+  			[data-tooltip-location="right"]:after {
+  				border-width: 5px 5px 5px 0px;
+  				border-color: transparent rgba(55, 64, 70, 0.9) transparent transparent;
+  				transform-origin: right;
+  				transform: translateY(50%) scaleX(0);
+  			}
+  			[data-tooltip-location="right"]:hover:after {
+  				transform: translateY(50%) scaleX(1);
+  			}
+
+
+
+  			/* BOTTOM */
+  			[data-tooltip-location="bottom"]:before,
+  			[data-tooltip-location="bottom"]:after {
+  				top: calc(100% + 5px);
+  				bottom: auto;
+  			}
+
+  			[data-tooltip-location="bottom"]:before {
+  				transform: translate(-50%, 5px) scale(0.5);
+  			}
+  			[data-tooltip-location="bottom"]:hover:before {
+  				transform: translate(-50%, 5px) scale(1);
+  			}
+
+  			[data-tooltip-location="bottom"]:after {
+  				border-width: 0px 5px 5px 5px;
+  				border-color: transparent transparent rgba(55, 64, 70, 0.9) transparent;
+  				transform-origin: bottom;
+  			}
 
 			/*table tbody tr td:hover{
 				box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
