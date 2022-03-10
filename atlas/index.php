@@ -8,7 +8,7 @@
    * @description | Exceptions sınıfını dahil ediyoruz
    * @serkankuyu [serkan.kuyu@hotmail.com.tr]
    * @siyahklasor.com/magaza [Pazaryeri Mağaza Simülasyonu]
-   * @version v1.1.41
+   * @version v1.1.43
    *
    *
    */
@@ -309,8 +309,12 @@
   				transition-duration: 0.2s;
   				transform: translateX(-50%) scaleY(1);
   			}
-			
-						/*
+
+
+
+
+
+			/*
 			  If you want some adjustability
 			  here are some orientation settings you can use:
 			  */
@@ -403,7 +407,11 @@
 				<div class="page">
 					<div class="page-body mb-2">
 						<div class="d-flex mt-3 align-items-center">
-							<div class="p-2 text-center"><img src="https://siyahklasor.com/assets/img/logo_dark.svg" width="41"></div>
+							<div class="p-2 text-center">
+								<div class="mr-15">
+									<img src="https://siyahklasor.com/assets/img/logo_dark.svg" width="41">
+								</div>
+							</div>
 							<div class="ml-auto">
 								<input type="search" class="form-control" :placeholder="list.length +' / envanter içerisinde ara..'" v-model="search">
 							</div>
@@ -418,9 +426,14 @@
 									<div class="d-flex align-items-center">
 										<div>
 											Ürün<br><span class="small-x text-muted">Detay Bilgiler</span>
+
 										</div>
 										<div class="ml-auto">
 											<a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" data-tooltip="Yeni Ürün Ekle" data-tooltip-location="bottom"><i class="bi bi-plus-circle-fill p-18"></i></a>
+										</div>
+										<div class="ml-15">
+											<a class="apointer" @click="runAll" v-if="show_hb" data-tooltip="Tümünü Başlat" data-tooltip-location="bottom"><i class="bi bi-diagram-3-fill p-19"></i></a>
+											<span v-if="hide_hb" v-html="loading"></span>
 										</div>
 									</div>
 								</th>
@@ -467,7 +480,7 @@
 						<tbody>
 							<tr v-for="(item, index) in filterList.slice(0,showProduct)">
 								<td></td>
-								<th scope="row">{{item.id}}</th>
+								<td>{{item.id}}</td>
 								<td class="td-size-459">
 									<div class="p-2">
 										<div class="d-flex">
@@ -1007,6 +1020,7 @@
 			<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
 
-			<script src="assets/js/app.js?v1.0.0"></script>
+			<script src="assets/js/app.js?v1.0.3"></script>
+
 		</body>
 		</html>
