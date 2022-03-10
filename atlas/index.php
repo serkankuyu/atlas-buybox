@@ -8,7 +8,7 @@
    * @description | Exceptions sınıfını dahil ediyoruz
    * @serkankuyu [serkan.kuyu@hotmail.com.tr]
    * @siyahklasor.com/magaza [Pazaryeri Mağaza Simülasyonu]
-   * @version v1.1.39
+   * @version v1.1.41
    *
    *
    */
@@ -896,8 +896,16 @@
 								<div class="col-2 col-shadow">
 									<div class="p-2">
 										<img v-for="ty in listTrendyol" v-if="select.id == ty.productsID" :src="ty.productImg" width="55" class="mt-5">
-										<p class="p-15 mt-4"><span class="small-x text-muted">Analiz Ediliyor...</span><br>{{select.name}}</p>
-										<span class="mt-2 small-x">Stok Kodu : {{select.id}}</span>
+										<p class="p-15 mt-4">
+											<div class="mt-2 small-x text-secondary" id="stockCode">{{select.id}}</div>
+											{{select.name}}
+										</p>
+										<div class="mt-5">
+											<label class="small-x form-label">MALİYET</label>
+											<input type="number" class="form-control form-control-sm" v-model="select.cost" disabled>
+											<div class="form-text small-x">Ürünün ham maliyet fiyatı</div>
+										</div>
+
 									</div>
 
 								</div>
@@ -919,6 +927,5 @@
 
 
 			<script src="assets/js/app.js?v1.0.0"></script>
-
 		</body>
 		</html>
