@@ -350,6 +350,25 @@ let app = new Vue({
 
          },
 
+        /**
+         * 
+         * 
+         * 
+         * @description | Tüm pazaryerlerini çalıştırıyoruz
+         * @serkankuyu [serkan.kuyu@hotmail.com.tr]
+         * @siyahklasor.com/magaza [Pazaryeri Mağaza Simülasyonu]
+         * 
+         *
+         *
+         */
+
+         runAll: function(){
+
+         		this.runHepsiburada();
+         		this.runTrendyol();
+         		this.runGittigidiyor();
+
+         },
 
          loadmore: function(){
 
