@@ -506,7 +506,7 @@
 											<div class="ml-auto">
 												<span class="text-muted small-x">Fiyat Önerisi</span><br>
 												<span class="price-bold text-muted">
-													{{ parseInt(item.priceHB) / ( ( parseInt(item.priceHB) / parseInt(hb.HBPrice) ) * 1.009 ) | money}} TL
+													{{ parseInt(hb.HBPrice) / 1.009 | money}} TL
 												</span>
 												<br>
 												<span class="small-x text-danger" v-if="store_hb != hb.seller"><i class="bi bi-x-circle-fill"></i> Buybox</span>	
@@ -532,7 +532,7 @@
 											<div class="ml-auto">
 												<span class="text-muted small-x">Fiyat Önerisi</span><br>
 												<span class="price-bold text-muted">
-													{{ parseInt(item.priceTY) / ( ( parseInt(item.priceTY) / parseInt(ty.TYPrice) ) * 1.009 ) | money}} TL
+													{{ parseInt(ty.TYPrice) / 1.009 | money}} TL
 												</span>
 												<br>
 												<span class="small-x text-danger" v-if="store_ty != ty.seller"><i class="bi bi-x-circle-fill"></i> Buybox</span>	
@@ -555,7 +555,7 @@
 											<div class="ml-auto">
 												<span class="text-muted small-x">Fiyat Önerisi</span><br>
 												<span class="price-bold text-muted">
-													{{ parseInt(item.priceGG) / ( ( parseInt(item.priceGG) / parseInt(gg.GGPrice) ) * 1.009 ) | money}} TL
+													{{ parseInt(gg.GGPrice) / 1.009 | money}} TL
 												</span>
 												<br>
 												<span class="small-x text-danger" v-if="store_gg != gg.seller"><i class="bi bi-x-circle-fill"></i> Buybox</span>	
@@ -811,7 +811,7 @@
 															<div class="mr-15">
 																<span class="text-muted small-x"><span class="text-muted small-x"><span data-tooltip="Algoritma tarafından önerilen fiyat" data-tooltip-location="top"><i class="bi bi-info-circle"></i></span> Fiyat Önerisi</span><br>
 																<span class="price-bold small-y text-muted">
-																	{{ parseInt(select.priceHB) / ( ( parseInt(select.priceHB) / parseInt(hb.HBPrice) ) * 1.009 ) | money}} TL
+																	{{ parseInt(hb.HBPrice) / 1.009 | money}} TL
 																</span>
 															</div>
 														</div>
@@ -886,7 +886,7 @@
 															<div class="mr-15">
 																<span class="text-muted small-x"><span class="text-muted small-x"><span data-tooltip="Algoritma tarafından önerilen fiyat" data-tooltip-location="top"><i class="bi bi-info-circle"></i></span> Fiyat Önerisi</span><br>
 																<span class="price-bold small-y text-muted">
-																	{{ parseInt(select.priceTY) / ( ( parseInt(select.priceTY) / parseInt(ty.TYPrice) ) * 1.009 ) | money}} TL
+																	{{ parseInt(ty.TYPrice) / 1.009 | money}} TL
 																</span>
 															</div>
 														</div>
@@ -963,7 +963,7 @@
 															<div class="mr-15">
 																<span class="text-muted small-x"><span data-tooltip="Algoritma tarafından önerilen fiyat" data-tooltip-location="top"><i class="bi bi-info-circle"></i></span> Fiyat Önerisi</span><br>
 																<span class="price-bold small-y text-muted">
-																	{{ parseInt(select.priceGG) / ( ( parseInt(select.priceGG) / parseInt(gg.GGPrice) ) * 1.009 ) | money}} TL
+																	{{ parseInt(gg.GGPrice) / 1.009 | money}} TL
 																</span>
 															</div>
 														</div>
@@ -994,10 +994,15 @@
 											<div class="mt-2 small-x text-secondary" id="stockCode">{{select.id}}</div>
 											{{select.name}}
 										</p>
-										<div class="mt-5">
+										<div class="mt-4">
 											<label class="small-x form-label">MALİYET</label>
 											<input type="number" class="form-control form-control-sm" v-model="select.cost" disabled>
 											<div class="form-text small-x">Ürünün ham maliyet fiyatı</div>
+										</div>
+										<div class="mt-1">
+											<label class="small-x form-label">KARLILIK ORANI</label>
+											<input type="number" class="form-control form-control-sm" placeholder="Örn;12" disabled>
+											<div class="form-text small-x">Hedeflediğiniz karlılık oranı</div>
 										</div>
 
 									</div>
