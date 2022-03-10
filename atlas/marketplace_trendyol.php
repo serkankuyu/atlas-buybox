@@ -129,6 +129,12 @@ if(!empty($base)){
 		$_explode_t_price = $_explode_third_price[0];
 
 
+		// Fiv Price
+		@$_product_five_price = $result->find('div.pr-bx-w span.prc-dsc', 0)->plaintext;
+		$_explode_five_price = explode("TL", $_product_five_price);
+		$_explode_fi_price = $_explode_five_price[0];
+
+
         // Seller Store
 		@$_seller_store = $result->find('div.merchant-box-wrapper',0)->plaintext;
 		$_seller_explode = explode("Satıcı : ", $_seller_store );
@@ -163,6 +169,11 @@ if(!empty($base)){
         }elseif(!empty(trim($_explode_f_price))){
 
         	$price_array = explode(".", $_explode_f_price);
+        	$price       = $price_array[0].$price_array[1];
+
+        }elseif(!empty(trim($_explode_fi_price))){
+
+        	$price_array = explode(".", $_explode_fi_price);
         	$price       = $price_array[0].$price_array[1];
 
         }else{
