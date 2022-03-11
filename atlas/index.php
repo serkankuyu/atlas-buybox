@@ -8,7 +8,7 @@
    * @description | Exceptions sınıfını dahil ediyoruz
    * @serkankuyu [serkan.kuyu@hotmail.com.tr]
    * @siyahklasor.com/magaza [Pazaryeri Mağaza Simülasyonu]
-   * @version v1.1.47
+   * @version v1.1.49
    *
    *
    */
@@ -55,260 +55,260 @@
   		<!-- Style -->
   		<style type="text/css">
 
-  			[v-cloak] {
-  				display: none
-  			}
+  		[v-cloak] {
+  			display: none
+  		}
 
-  			:root{
-  				--font-name :'Inter', sans-serif;
-  				--bg-color:#F5F5F5;
-  				--page-color:#FFF;
-  			}
+  		:root{
+  			--font-name :'Inter', sans-serif;
+  			--bg-color:#F5F5F5;
+  			--page-color:#FFF;
+  		}
 
-  			body{
-  				font-family: var(--font-name);
-  				font-weight: 500;
-  				background: var(--bg-color);
-  			}
+  		body{
+  			font-family: var(--font-name);
+  			font-weight: 500;
+  			background: var(--bg-color);
+  		}
 
-  			h1,h2,h3,h4,h5,h6{
-  				font-weight: 900;
-  			}
+  		h1,h2,h3,h4,h5,h6{
+  			font-weight: 900;
+  		}
 
-  			.page{
-  				background: var(--page-color);
-  				height: 100%;
+  		.page{
+  			background: var(--page-color);
+  			height: 100%;
 
-  			}
+  		}
 
-  			.page .page-body{
-  				padding: 25px;
-  			}
+  		.page .page-body{
+  			padding: 25px;
+  		}
 
-  			.ml-auto{
-  				margin-left: auto;
-  			}
-  			.ml-15{
-  				margin-left: 15px;
-  			}
+  		.ml-auto{
+  			margin-left: auto;
+  		}
+  		.ml-15{
+  			margin-left: 15px;
+  		}
 
-  			.mr-15{
-  				margin-right: 15px;
-  			}
-  			.ml-25{
-  				margin-left: 25px;
-  			}
+  		.mr-15{
+  			margin-right: 15px;
+  		}
+  		.ml-25{
+  			margin-left: 25px;
+  		}
 
-  			.ml-35{
-  				margin-left: 35px;
-  			}			
-  			.small-x{
-  				font-size: 12px;
-  				font-weight: 500;
-  			}
+  		.ml-35{
+  			margin-left: 35px;
+  		}			
+  		.small-x{
+  			font-size: 12px;
+  			font-weight: 500;
+  		}
 
-  			.small-w{
-  				font-size: 12.5px;
-  				font-weight: 500;
-  			}
-  			.small-y{
-  				font-size: 14px;
-  				font-weight: 500;	
-  			}
+  		.small-w{
+  			font-size: 12.5px;
+  			font-weight: 500;
+  		}
+  		.small-y{
+  			font-size: 14px;
+  			font-weight: 500;	
+  		}
 
-  			.small-z{
-  				font-size: 14px;
-  				font-weight: 500;	
-  			}
+  		.small-z{
+  			font-size: 14px;
+  			font-weight: 500;	
+  		}
 
-  			.td-size-459{
-  				width: 459px;
-  			}
+  		.td-size-459{
+  			width: 459px;
+  		}
 
-  			.p-13{
-  				font-size: 13px;
-  			}
+  		.p-13{
+  			font-size: 13px;
+  		}
 
-  			.p-14{
-  				font-size: 14px;
-  			}
+  		.p-14{
+  			font-size: 14px;
+  		}
 
-  			.p-15{
-  				font-size: 15px;
-  			}
+  		.p-15{
+  			font-size: 15px;
+  		}
 
-  			.p-16{
-  				font-size: 16px;
-  			}
-  			.p-19{
-  				font-size: 19px;
-  			}
-  			.p-18{
-  				font-size: 18px;
-  			}
-  			.p-29{
-  				font-size: 29px;
-  			}
-  			.p-bold{
-  				font-weight: 800;
-  			}
+  		.p-16{
+  			font-size: 16px;
+  		}
+  		.p-19{
+  			font-size: 19px;
+  		}
+  		.p-18{
+  			font-size: 18px;
+  		}
+  		.p-29{
+  			font-size: 29px;
+  		}
+  		.p-bold{
+  			font-weight: 800;
+  		}
 
-  			.price-bold{
-  				font-weight: 800;
-  			}
+  		.price-bold{
+  			font-weight: 800;
+  		}
 
-  			a{
-  				text-decoration: none;
-  				color: #000;
-  			}
+  		a{
+  			text-decoration: none;
+  			color: #000;
+  		}
 
-  			a:hover{
-  				color: #000;
-  			}
-  			.underline{
-  				position: relative;
-  			}
+  		a:hover{
+  			color: #000;
+  		}
+  		.underline{
+  			position: relative;
+  		}
 
-  			.underline::before{
-  				content: '';
-  				position: absolute;
-  				bottom: 0;
-  				right: 0;
-  				width: 0;
-  				height: 2px;
-  				background-color: #000;
-  				transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+  		.underline::before{
+  			content: '';
+  			position: absolute;
+  			bottom: 0;
+  			right: 0;
+  			width: 0;
+  			height: 2px;
+  			background-color: #000;
+  			transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+  		}
+
+  		@media (hover: hover) and (pointer: fine) {
+  			.underline:hover::before{
+  				left: 0;
+  				right: auto;
+  				width: 100%;
   			}
+  		}
 
-  			@media (hover: hover) and (pointer: fine) {
-  				.underline:hover::before{
-  					left: 0;
-  					right: auto;
-  					width: 100%;
-  				}
-  			}
+  		.icon-card{
+  			background:var(--bg-color);
+  			color: #B2BABB;
+  			border-radius: 17px;
+  			width: 59px;
+  			box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  		}
 
-  			.icon-card{
-  				background:var(--bg-color);
-  				color: #B2BABB;
-  				border-radius: 17px;
-  				width: 59px;
-  				box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
-  			}
+  		.br-top{
+  			border-top: 7px solid #fff;
+  		}
 
-  			.br-top{
-  				border-top: 7px solid #fff;
-  			}
+  		.br-right{
+  			border-right: 1px solid #ddd;
+  		}
 
-  			.br-right{
-  				border-right: 1px solid #ddd;
-  			}
+  		.br-right-ff{
+  			border-right: 5px solid #fff;
+  		}
 
-  			.br-right-ff{
-  				border-right: 5px solid #fff;
-  			}
+  		.modal-shadow{
+  			box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  		}
 
-  			.modal-shadow{
-  				box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-  			}
+  		.card-shadow{
+  			box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  		}
 
-  			.card-shadow{
-  				box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
-  			}
+  		.table-sticky{
+  			position: -webkit-sticky; /* Safari */
+  			position: sticky;
+  			top: 0;
+  			background: var(--page-color);
+  			z-index: 99;
+  			box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+  		}
 
-  			.table-sticky{
-  				position: -webkit-sticky; /* Safari */
-  				position: sticky;
-  				top: 0;
-  				background: var(--page-color);
-  				z-index: 99;
-  				box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
-  			}
+  		.apointer{
+  			cursor: pointer;
+  		}
 
-  			.apointer{
-  				cursor: pointer;
-  			}
+  		.table thead>tr>th {
+  			vertical-align: bottom;
+  			border-bottom: 2px solid hsl(0, 0%, 99%);
+  		}
 
-  			.table thead>tr>th {
-  				vertical-align: bottom;
-  				border-bottom: 2px solid hsl(0, 0%, 99%);
-  			}
+  		.col-shadow{
+  			box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+  		}
 
-  			.col-shadow{
-  				box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
-  			}
+  		/* TOOLTİP */
 
-  			/* TOOLTİP */
+  		[data-tooltip] {
+  			position: relative;
+  			z-index: 10;
+  		}
 
-  			[data-tooltip] {
-  				position: relative;
-  				z-index: 10;
-  			}
+  		/* Positioning and visibility settings of the tooltip */
+  		[data-tooltip]:before,
+  		[data-tooltip]:after {
+  			position: absolute;
+  			visibility: hidden;
+  			opacity: 0;
+  			left: 50%;
+  			bottom: calc(100% + 5px);
+  			pointer-events: none;
+  			transition: 0.2s;
+  			will-change: transform;
+  		}
 
-  			/* Positioning and visibility settings of the tooltip */
-  			[data-tooltip]:before,
-  			[data-tooltip]:after {
-  				position: absolute;
-  				visibility: hidden;
-  				opacity: 0;
-  				left: 50%;
-  				bottom: calc(100% + 5px);
-  				pointer-events: none;
-  				transition: 0.2s;
-  				will-change: transform;
-  			}
-
-  			/* The actual tooltip with a dynamic width */
-  			[data-tooltip]:before {
-  				content: attr(data-tooltip);
-  				padding: 10px 18px;
-  				min-width: 50px;
-  				max-width: 300px;
-  				width: max-content;
-  				width: -moz-max-content;
-  				border-radius: 6px;
-  				font-size: 13px;
-  				/*   font-size: 0.73rem; */
-  				background-color: rgba(59, 72, 80, 0.9);
-  				background-image: linear-gradient(30deg,
-  					rgba(59, 72, 80, 0.44),
-  					rgba(59, 68, 75, 0.44),
-  					rgba(60, 82, 88, 0.44));
-  				box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.2);
-  				color: #fff;
-  				text-align: center;
-  				white-space: pre-wrap;
-  				transform: translate(-50%, -5px) scale(0.5);
-  			}
-
-
-  			[data-tooltip]:after {
-  				content: '';
-  				border-style: solid;
-  				border-width: 5px 5px 0px 5px;
-  				border-color: rgba(55, 64, 70, 0.9) transparent transparent transparent;
-  				transition-duration: 0s;       
-  				transform-origin: top;
-  				transform: translateX(-50%) scaleY(0);
-  			}
+  		/* The actual tooltip with a dynamic width */
+  		[data-tooltip]:before {
+  			content: attr(data-tooltip);
+  			padding: 10px 18px;
+  			min-width: 50px;
+  			max-width: 300px;
+  			width: max-content;
+  			width: -moz-max-content;
+  			border-radius: 6px;
+  			font-size: 13px;
+  			/*   font-size: 0.73rem; */
+  			background-color: rgba(59, 72, 80, 0.9);
+  			background-image: linear-gradient(30deg,
+  				rgba(59, 72, 80, 0.44),
+  				rgba(59, 68, 75, 0.44),
+  				rgba(60, 82, 88, 0.44));
+  			box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.2);
+  			color: #fff;
+  			text-align: center;
+  			white-space: pre-wrap;
+  			transform: translate(-50%, -5px) scale(0.5);
+  		}
 
 
-  			[data-tooltip]:hover:before,
-  			[data-tooltip]:hover:after {
-  				visibility: visible;
-  				opacity: 1;
-  			}
-  			/* Scales from 0.5 to 1 -> grow effect */
-  			[data-tooltip]:hover:before {
-  				transition-delay: 0.3s;
-  				transform: translate(-50%, -5px) scale(1);
-  			}
-  			/* Slide down effect only on mouseenter (NOT on mouseleave) */
-  			[data-tooltip]:hover:after {
-  				transition-delay: 0.5s; /* Starting after the grow effect */
-  				transition-duration: 0.2s;
-  				transform: translateX(-50%) scaleY(1);
-  			}
+  		[data-tooltip]:after {
+  			content: '';
+  			border-style: solid;
+  			border-width: 5px 5px 0px 5px;
+  			border-color: rgba(55, 64, 70, 0.9) transparent transparent transparent;
+  			transition-duration: 0s;       
+  			transform-origin: top;
+  			transform: translateX(-50%) scaleY(0);
+  		}
+
+
+  		[data-tooltip]:hover:before,
+  		[data-tooltip]:hover:after {
+  			visibility: visible;
+  			opacity: 1;
+  		}
+  		/* Scales from 0.5 to 1 -> grow effect */
+  		[data-tooltip]:hover:before {
+  			transition-delay: 0.3s;
+  			transform: translate(-50%, -5px) scale(1);
+  		}
+  		/* Slide down effect only on mouseenter (NOT on mouseleave) */
+  		[data-tooltip]:hover:after {
+  			transition-delay: 0.5s; /* Starting after the grow effect */
+  			transition-duration: 0.2s;
+  			transform: translateX(-50%) scaleY(1);
+  		}
 
 
 
@@ -319,81 +319,81 @@
 			  here are some orientation settings you can use:
 			  */
 
-  			/* LEFT */
-  			/* Tooltip + arrow */
-  			[data-tooltip-location="left"]:before,
-  			[data-tooltip-location="left"]:after {
-  				left: auto;
-  				right: calc(100% + 5px);
-  				bottom: 50%;
-  			}
+			  /* LEFT */
+			  /* Tooltip + arrow */
+			  [data-tooltip-location="left"]:before,
+			  [data-tooltip-location="left"]:after {
+			  	left: auto;
+			  	right: calc(100% + 5px);
+			  	bottom: 50%;
+			  }
 
-  			/* Tooltip */
-  			[data-tooltip-location="left"]:before {
-  				transform: translate(-5px, 50%) scale(0.5);
-  			}
-  			[data-tooltip-location="left"]:hover:before {
-  				transform: translate(-5px, 50%) scale(1);
-  			}
+			  /* Tooltip */
+			  [data-tooltip-location="left"]:before {
+			  	transform: translate(-5px, 50%) scale(0.5);
+			  }
+			  [data-tooltip-location="left"]:hover:before {
+			  	transform: translate(-5px, 50%) scale(1);
+			  }
 
-  			/* Arrow */
-  			[data-tooltip-location="left"]:after {
-  				border-width: 5px 0px 5px 5px;
-  				border-color: transparent transparent transparent rgba(55, 64, 70, 0.9);
-  				transform-origin: left;
-  				transform: translateY(50%) scaleX(0);
-  			}
-  			[data-tooltip-location="left"]:hover:after {
-  				transform: translateY(50%) scaleX(1);
-  			}
-
-
-
-  			/* RIGHT */
-  			[data-tooltip-location="right"]:before,
-  			[data-tooltip-location="right"]:after {
-  				left: calc(100% + 5px);
-  				bottom: 50%;
-  			}
-
-  			[data-tooltip-location="right"]:before {
-  				transform: translate(5px, 50%) scale(0.5);
-  			}
-  			[data-tooltip-location="right"]:hover:before {
-  				transform: translate(5px, 50%) scale(1);
-  			}
-
-  			[data-tooltip-location="right"]:after {
-  				border-width: 5px 5px 5px 0px;
-  				border-color: transparent rgba(55, 64, 70, 0.9) transparent transparent;
-  				transform-origin: right;
-  				transform: translateY(50%) scaleX(0);
-  			}
-  			[data-tooltip-location="right"]:hover:after {
-  				transform: translateY(50%) scaleX(1);
-  			}
+			  /* Arrow */
+			  [data-tooltip-location="left"]:after {
+			  	border-width: 5px 0px 5px 5px;
+			  	border-color: transparent transparent transparent rgba(55, 64, 70, 0.9);
+			  	transform-origin: left;
+			  	transform: translateY(50%) scaleX(0);
+			  }
+			  [data-tooltip-location="left"]:hover:after {
+			  	transform: translateY(50%) scaleX(1);
+			  }
 
 
 
-  			/* BOTTOM */
-  			[data-tooltip-location="bottom"]:before,
-  			[data-tooltip-location="bottom"]:after {
-  				top: calc(100% + 5px);
-  				bottom: auto;
-  			}
+			  /* RIGHT */
+			  [data-tooltip-location="right"]:before,
+			  [data-tooltip-location="right"]:after {
+			  	left: calc(100% + 5px);
+			  	bottom: 50%;
+			  }
 
-  			[data-tooltip-location="bottom"]:before {
-  				transform: translate(-50%, 5px) scale(0.5);
-  			}
-  			[data-tooltip-location="bottom"]:hover:before {
-  				transform: translate(-50%, 5px) scale(1);
-  			}
+			  [data-tooltip-location="right"]:before {
+			  	transform: translate(5px, 50%) scale(0.5);
+			  }
+			  [data-tooltip-location="right"]:hover:before {
+			  	transform: translate(5px, 50%) scale(1);
+			  }
 
-  			[data-tooltip-location="bottom"]:after {
-  				border-width: 0px 5px 5px 5px;
-  				border-color: transparent transparent rgba(55, 64, 70, 0.9) transparent;
-  				transform-origin: bottom;
-  			}
+			  [data-tooltip-location="right"]:after {
+			  	border-width: 5px 5px 5px 0px;
+			  	border-color: transparent rgba(55, 64, 70, 0.9) transparent transparent;
+			  	transform-origin: right;
+			  	transform: translateY(50%) scaleX(0);
+			  }
+			  [data-tooltip-location="right"]:hover:after {
+			  	transform: translateY(50%) scaleX(1);
+			  }
+
+
+
+			  /* BOTTOM */
+			  [data-tooltip-location="bottom"]:before,
+			  [data-tooltip-location="bottom"]:after {
+			  	top: calc(100% + 5px);
+			  	bottom: auto;
+			  }
+
+			  [data-tooltip-location="bottom"]:before {
+			  	transform: translate(-50%, 5px) scale(0.5);
+			  }
+			  [data-tooltip-location="bottom"]:hover:before {
+			  	transform: translate(-50%, 5px) scale(1);
+			  }
+
+			  [data-tooltip-location="bottom"]:after {
+			  	border-width: 0px 5px 5px 5px;
+			  	border-color: transparent transparent rgba(55, 64, 70, 0.9) transparent;
+			  	transform-origin: bottom;
+			  }
 
 			/*table tbody tr td:hover{
 				box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
@@ -813,6 +813,8 @@
 																<span class="price-bold small-y text-muted">
 																	{{ parseInt(hb.HBPrice) / 1.009 | money}} TL
 																</span>
+																<br>
+																<span class="small-x text-muted">Kârlılık % {{ (((((parseInt(hb.HBPrice) / 1.009) / (select.cost + hbcomm + select.cargoHB)).toFixed(2)) * 100 ) - 100) .toFixed(2)}}</span>
 															</div>
 														</div>
 														<div class="ml-auto text-end mt-2">
@@ -889,6 +891,8 @@
 																<span class="price-bold small-y text-muted">
 																	{{ parseInt(ty.TYPrice) / 1.009 | money}} TL
 																</span>
+																<br>
+																<span class="small-x text-muted">Kârlılık % {{ (((((parseInt(ty.TYPrice) / 1.009) / (select.cost + tycomm + select.cargoTY)).toFixed(2)) * 100 ) - 100) .toFixed(2)}}</span>
 															</div>
 														</div>
 														<div class="ml-auto text-end mt-2">
@@ -931,7 +935,7 @@
 															<div class="card">
 																<div class="card-body">
 																	<span class="small-x">{{gg.seller}}</span>
-																	<p class="p-bold">{{parseInt(gg.GGPrice) | money}}</p>
+																	<p class="p-bold">{{GGPrice = parseInt(gg.GGPrice) | money}}</p>
 																</div>
 															</div>
 
@@ -966,9 +970,10 @@
 														<div class="br-right">
 															<div class="mr-15">
 																<span class="text-muted small-x"><span data-tooltip="Algoritma tarafından önerilen fiyat" data-tooltip-location="top"><i class="bi bi-info-circle"></i></span> Fiyat Önerisi</span><br>
-																<span class="price-bold small-y text-muted">
-																	{{ parseInt(gg.GGPrice) / 1.009 | money}} TL
-																</span>
+																<span class="small-y text-muted">
+																	<span class="p-bold">{{ parseInt(gg.GGPrice) / 1.009 | money}} TL</span>
+																</span><br>
+																<span class="small-x text-muted">Kârlılık % {{ (((((parseInt(gg.GGPrice) / 1.009) / (select.cost + ggcomm + select.cargoGG)).toFixed(2)) * 100 ) - 100) .toFixed(2)}}</span>
 															</div>
 														</div>
 
@@ -1025,7 +1030,7 @@
 			<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
 
-			<script src="assets/js/app.js?v1.0.3"></script>
+			<script src="assets/js/app.js?v1.0.16"></script>
 
 		</body>
 		</html>
