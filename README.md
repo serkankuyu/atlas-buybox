@@ -13,7 +13,7 @@ Web tabanlı olan programda aşağıdaki özellikler yer almaktadır.
 https://siyahklasor.com/atlas/
 
 #### Ürünler Listesi
-![alt text](https://siyahklasor.com/github/screenn.png)
+![alt text](https://siyahklasor.com/github/screen8.png)
 
 #### Yeni ürün ekleme Penceresi
 ![alt text](https://siyahklasor.com/github/screen6.png)
